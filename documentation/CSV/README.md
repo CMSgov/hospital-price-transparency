@@ -1,0 +1,149 @@
+### Hospital Machine-Readable File Data Dictionary
+The following is documentation for those who wish to build a CSV file to satisfy 45 CFR 180.50 requirements. This documentation has information in how to disclose data elements for both the ["Tall"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0%20HPT%20CSV%20Sample%20Format%20(Tall).csv) and
+["Wide"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0%20HPT%20CSV%20Sample%20Format%20(Wide).csv) CSV format. 
+
+General CSV Instructions
+========================
+
+Developers of machine-readable files (MRFs) should generally consider and adopt established standards and industry norms for CSV files when creating the MRF.  For more information on CSV standards visit https://www.rfc-editor.org/rfc/rfc4180. 
+
+For CSV, hospitals may choose either a “wide” or “tall” layout. The CSV MRF must be saved as plaintext data separated by commas (“,”) and not use other delimiters. Below are additional reminders to avoid common errors in MRFs:
+* Do not insert a value or any type of indicators (e.g., “N/A”) if the hospital does not have applicable data to encode. If you would like to include an explanation for the blanks, you may do so using Additional Generic Notes or Additional Payer-Specific Notes. 
+* Encode valid values as instructed below. Values encoded incorrectly will generate a deficiency.
+  * For example, if the valid value is ‘numeric’ (such as for Payer-Specific Negotiated Charge: Dollar Amount), inserting anything other than a number (such as inserting a dollar sign with a number) will generate a deficiency.  Similarly, if the valid value is ‘enum’ (such as for Code Type), inserting anything other than the values indicated (such as inserting ‘other’) will generate a deficiency.
+  * All "Numeric" data elements must be positive numbers. Entering a negative number or "0" will generate a deficiency. 
+* While GitHub examples exclude leading and trailing spaces in headers, valid values, and around pipes, inadvertently inserting spaces will not generate a deficiency. Similarly, while GitHub examples may use capital and lower-case letters, valid values are case-insensitive and changes in capital vs lower-case letters will not generate a deficiency.
+* Hospitals are permitted to include additional optional information through optional data elements that are defined in the data dictionary (e.g., billing class and hospital financial aid policy) or hospital created data elements. Follow the technical instructions for including the defined optional data elements.
+
+### General Data Elements
+These required general data about the MRF must be stated once at the top of the file (i.e. the first row).
+| Column Header (Tall format) | Column Header (Wide format) | Name | Type | Definition | Blanks Accepted |
+| ----- | ---- | ---- |  ---- | ---------- | -------- |
+| **hospital_name** | **hospital_name** | Hospital Name | String | The legal business name of the licensee. | No |
+| **last_updated_on** | **last_updated_on** | MRF Date | Date | Date on which the MRF was last updated. Date must be in an ISO 8601 format (i.e. YYYY-MM-DD) | No |
+| **version** | **version** | CMS Template Version | String | The version of the CMS Template used. | No |
+| **hospital_location** | **hospital_location** | Hospital Location(s) | String | The unique name of the hospital location absent any acronyms. | No |
+| **hospital_address** | **hospital_address** | Hospital Address(es) | String | The geographic address of the corresponding hospital location. See [additional hospital address notes](#additional-notes-on-hospital_address) | No |
+| **license_number \| [state]** | **license_number \| [state]** | Hospital Licensure Information | String | The hospital license number and the licensing state or territory’s two-letter abbreviation for the hospital location(s) indicated in the file. See [additional csv placeholder notes](#additional-csv-placeholder-notes) for implementation details. | Yes |
+| **Header is [Affirmation Statement](#additional-affirmation-notes)** | **Header is [Affirmation Statement](#additional-affirmation-notes)** | Affirmation Statement | Boolean | Required affirmation statement. Valid values: `true` and `false`. See [additional affirmation notes](#additional-affirmation-notes) for more details. | No |
+
+#### Additional Notes on `hospital_address`
+If the MRF contains identical standard charges for multiple hospital locations, separate the address of each location with a “|”. List the addresses in the same sequential order as the `hospital_location` values for the data element above. Address(es) must be included for, at minimum, all inpatient facilities and stand-alone emergency departments. Each hospital location operating under a single hospital license (or approval) that has a different set of standard charges than the other location(s) operating under the same hospital license (or approval) must separately make public the standard charges applicable to that location.
+
+#### Additional Affirmation Notes
+The affirmation data element for CSV will require the following text in the column header: 
+> To the best of its knowledge and belief, the hospital has included all applicable standard charge information in accordance with the requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date indicated.   
+
+The value to be encoded by the hospital will either be "true" or "false". Please see the column header in the CSV template [here](templates/V2.0%20HPT%20CSV%20Sample%20Format%20(Tall).csv)
+
+### Required Standard Charge, Item/Service, and Coding Data Elements
+After the general data elements have been disclosed, the disclosure of required standard charges, item/service, and coding data elements  will begin on row 3.
+
+If a `--` is encountered in the following table, then the instruction does not apply to the specific CMS template selected. You can view both [CSV templates here](https://github.com/CMSgov/hospital-price-transparency/tree/master/documentation/CSV/templates).
+
+| Column Header (Tall format) | Column Header (Wide format) | Name | Type | Definition | Blanks Accepted |
+| ----- | ---- | ---- |  ---- | ---------- | -------- |
+| **description** | **description** | General Description | String | Description of each item or service provided by the hospital that corresponds to the standard charge the hospital has established. | No |
+| **code \| [i]** | **code \| [i]** | Billing/Account Code(s) | String | Any code(s) used by the hospital for purposes of billing or accounting for the item or service. See [additional csv placeholder notes](#additional-csv-placeholder-notes) for implementation details. | Yes |
+| **code \| [i] \| type** | **code \| [i] \| type** | Code Type(s) | Enum | The corresponding coding type for the `code` data element. Please see a list of the [valid values](#additional-notes-concerning-code-types) and [additional csv placeholder notes](#additional-csv-placeholder-notes) for implementation details. | Yes |
+| **setting** | **setting** | Setting | Enum | Indicates whether the item or service is provided in connection with an inpatient admission or an outpatient department visit. Valid values: "inpatient", "outpatient", "both". |  No |
+| **drug_unit_of_measurement** | **drug_unit_of_measurement** | Drug Unit of Measurement | Numeric | If the item or service is a drug, indicate the unit value that corresponds to the established standard charge. | Yes |
+| **drug_type_of_measurement** | **drug_type_of_measurement** | Drug Type of Measurement | Enum | The measurement type that corresponds to the established standard charge for drugs as defined by either the National Drug Code or the National Council for Prescription Drug Programs. See the [list](#additional-notes-for-drug_type_of_measurement-values) of valid values. | Yes |
+| **standard_charge \| gross** | **standard_charge \| gross** | Gross Charge | Numeric | Gross charge is the charge for an individual item or service that is reflected on a hospital’s chargemaster, absent any discounts. | Yes |
+| **standard_charge \| discounted_cash** | **standard_charge \| discounted_cash** | Discounted Cash Price | Numeric | Discounted cash price is defined as the charge that applies to an individual who pays cash (or cash equivalent) for a hospital item or service. | Yes |
+| **payer_name** | -- | Payer Name | String | The name of the third-party payer that is, by statute, contract, or agreement, legally responsible for payment of a claim for a healthcare item or service. | Yes |
+| **plan_name** | -- | Plan Name | String | The name of the payer’s specific plan associated with the standard charge. | Yes |
+| **modifiers** | **modifiers** | Modifier(s) | String | Include any modifier(s) that may change the standard charge that corresponds to hospital items or services. | Yes |
+| **standard_charge \| negotiated_dollar** | **standard_charge \| [payer_name] \| [plan_name] \| negotiated_dollar** | Payer-specific Negotiated Charge: Dollar Amount | Numeric | Payer-specific negotiated charge (expressed as a dollar amount) that a hospital has negotiated with a third-party payer for the corresponding item or service. See [additional csv placeholder notes](#additional-csv-placeholder-notes) for implementation details. | Yes |
+| **standard_charge \| negotiated_percentage** | **standard_charge \| [payer_name] \| [plan_name] \| negotiated_percentage** | Payer-specific Negotiated Charge: Percentage | Numeric | Payer-specific negotiated charge (expressed as a percentage) that a hospital has negotiated with a third-party payer for an item or service. See [additional csv placeholder notes](#additional-csv-placeholder-notes) for implementation details and [additional notes for percentage](#additional-notes-for-percentage) for disclosure details. | Yes |
+| **standard_charge \| negotiated_algorithm** | **standard_charge \| [payer_name] \| [plan_name] \| negotiated_algorithm** | Payer-specific Negotiated Charge: Algorithm | String | Payer-specific negotiated charge (expressed as an algorithm) that a hospital has negotiated with a third-party payer for the corresponding item or service. See [additional csv placeholder notes](#additional-csv-placeholder-notes) for implementation details. | Yes |
+| **estimated_amount** | **estimated_amount \| [payer_name] \| [plan_name]** | Estimated Allowed Amount | Numeric |  Estimated allowed amount means the average dollar amount that the hospital has historically received from a third party payer for an item or service. If the standard charge is based on a percentage or algorithm, the MRF must also specify the estimated allowed amount for that item or service. See [additional estimated amount notes](#additional-notes-for-estimated_amount) for more information. | Yes |
+| **standard_charge \| min** | **standard_charge \| min** | De-identified Minimum Negotiated Charge| Numeric | De-identified minimum negotiated charge is the lowest charge that a hospital has negotiated with all third-party payers for an item or service. | Yes |
+| **standard_charge \| max** | **standard_charge \| max** | De-identified Maximum  Negotiated Charge| Numeric | De-identified maximum negotiated charge is the highest charge that a hospital has negotiated with all third-party payers for an item or service. | Yes |
+| **standard_charge \| methodology** | **standard_charge \| [payer_name] \| [plan_name] \| methodology** | Standard Charge Methodology | Enum | Method used to establish the payer-specific negotiated charge. The valid value corresponds to the contract arrangement. See [additional standard charge methodology notes and valid values](#additional-standard-charge-methodology-notes) for more information and [additional csv placeholder notes](#additional-csv-placeholder-notes) for implementation details. | Yes |
+| **additional_generic_notes** | **additional_generic_notes** | Additional Generic Notes | String |  A free text data element that is used to help explain any of the data including, for example, blanks due to no applicable data, charity care policies, or other contextual information that aids in the public’s understanding of the standard charges. See [additional-generic-notes-notes](#additional-generic-notes-notes) for more details. | Yes |
+| -- | **additional_payer_notes \| [payer_name] \| [plan_name]** | Additional Payer-Specific Notes | String | A free text data element used to help explain data in the file that is related to a payer-specific negotiated charge. See [additional csv placeholder notes](#additional-csv-placeholder-notes) for implementation details. | Yes |
+
+##### Additional Notes for Percentage
+This data element should be encoded only when the payer-specific negotiated charge has been established as a percentage and no dollar amount can be calculated. This data element will contain the numeric representation of the percentage not as a decimal (70.5% is to be entered as “70.5” and not “.705”). If you encode information for this data element, you must also calculate and display the estimated allowed amount for that item or service as a separate data element.
+
+##### Additional Notes for `estimated_amount`
+CMS recommends that the hospital encode 999999999 (nine 9s) in the data element value to indicate that there is not sufficient historic claims history to derive the expected allowed amount, and then update the file when sufficient history is available. As a guide for the threshold for sufficient history, we suggest hospitals use [the CMS Cell Suppression Policy](https://www.hhs.gov/guidance/document/cms-cell-suppression-policy) established in January, 2020. Additionally if the hospital wishes to provide further context for the lack of data they can do so in the appropriate additional notes field.
+
+##### Additional Notes for `drug_type_of_measurement` Values
+
+The following valid values for `drug_type_of_measurement` are based on two sets of industry standards; National Drug Code and National Council for Prescription Drug Programs.
+
+| Standard Name | Reporting Value | 
+| ------------- | --------------- | 
+| GR | Grams |
+| ME | Milligrams |
+| ML | Milliliters | 
+| UN | Unit | 
+| F2 | International Unit | 
+| EA | Each | 
+| GM | Gram | 
+
+##### Additional Generic Notes Notes
+If using the CSV Tall template, this data element can be used for both additional payer-specific and general information about the standard charge for an item or service.
+
+If using the CSV Wide template, use the ‘Additional Generic Notes’ data element for additional general information and use the ‘Additional Payer-Specific Notes’ data element for additional payer-specific information.
+
+##### Additional CSV Placeholder Notes
+There are a few CSV data elements that have placeholders that must be updated by the developer of the MRF. Placeholders can be identified as an item in brackets `[ ]` and are found in column headers (rows 1 and 3). For example, both data elements `standard_charge | [payer_name] | [plan_name] | algorithm` and `code | [i]` on row 3 contain placeholders that must be replaced with valid values.
+
+There are four different types of placeholders in the MRF: `[state]`, `[i]`, `[plan_name]`, and `[payer_name]`.
+* `[state]` must be replaced by the 2-letter state code such as CA or NY. For example, the column header on row 1, `license_number|[state]` would be updated to `license_number|CA` for a hospital licensed by the state of California.
+* `[i]` is a CSV header placeholder that must be replaced with numbers starting at “1”, increasing by one to however many columns of codes are needed, and matching the associated code type header. For example, if two code and code type combinations are needed, the first header is `code|1` and the second header is `code|2`.
+* `[plan_name]` must be replaced by the specific plan name for the payer with whom the hospital has negotiated a payer-specific negotiated charge.
+* `[payer_name]` must be replaced by the name of the payer with whom the hospital has negotiated a payer-specific negotiated charge.
+
+##### Additional Standard Charge Methodology Notes
+The `methodology` data element describes the method used by the hospital to establish a payer-specific negotiated charge. Below are definitions for the valid values for the `methodology` data element and illustrative examples for how to represent unique contracting scenarios in combination with other data elements.
+
+Encode the value that most closely represents the standard charge methodology for the payer-specific negotiated charge for an associated item or service. If the standard charge methodology the hospital has used isn’t represented in the definitions, encode `other` along with a detailed explanation of the contracting arrangement in the `additional_generic_notes` for the CSV Tall template or the `additional_payer_notes` for the CSV Wide template.
+
+* `case rate`: A flat rate for a package of items and services triggered by a diagnosis, treatment, or condition for a designated length of time.
+* `fee schedule`: The payer-specific negotiated charge is based on a fee schedule. Examples of common fee schedules include Medicare, Medicaid, commercial payer, and workers compensation. The dollar amount that is based on the indicated fee schedule should be encoded into the `Payer-specific Negotiated Charge: Dollar Amount` data element. For standard charges based on a percentage of a known fee schedule, the dollar amount should be calculated and encoded in the `Payer-specific Negotiated Charge: Dollar Amount` data element. 
+* `percent of total billed charges`: The payer-specific negotiated charge is based on a percentage of the total billed charges for an item or service. This percentage may vary depending on certain pre-determined criteria being met.
+* `per diem`: The per day charge for providing hospital items and services.
+* `other`: If the standard charge methodology used to establish a payer-specific negotiated charge cannot be described by one of the types of standard charge methodology above, select ‘Other’ and encode a detailed explanation of the contracting arrangement in the `additional_generic_notes` for the CSV Tall template or the `additional_payer_notes` for the CSV Wide template.
+
+
+##### Additional Notes Concerning Code Types
+Hospital items and services may be associated with a variety of billing codes or accounting codes. Examples include Current Procedural Terminology (CPT), Healthcare Common Procedure Coding System (HCPCS), National Drug Code (NDC), Revenue Center (RC) code, or other common payer identifier. The list of valid values is in the following table with the name of the standard and the associated valid values.
+
+The value "LOCAL" may be used for internal accounting codes in conjunction with another billing code for that item or service. However, if no other code types are available for a particular item or service, "LOCAL" may be used as a valid value.
+
+| Standard Name | Reporting Value | 
+| ------------- | --------------- | 
+| Current Procedural Terminology | CPT |
+| National Drug Code | NDC |
+| Healthcare Common Procedural Coding System | HCPCS | 
+| Revenue Code | RC | 
+| International Classification of Diseases | ICD | 
+| Diagnosis Related Groups | DRG |
+| Medicare Severity Diagnosis Related Groups | MS-DRG |
+| Refined Diagnosis Related Groups | R-DRG |
+| Severity Diagnosis Related Groups | S-DRG |
+| All Patient, Severity-Adjusted Diagnosis Related Groups | APS-DRG |
+| All Patient Diagnosis Related Groups | AP-DRG | |
+| All Patient Refined Diagnosis Related Groups | APR-DRG |
+| Ambulatory Payment Classifications | APC |
+| Local Code Processing | LOCAL |
+| Enhanced Ambulatory Patient Grouping | EAPG |
+| Health Insurance Prospective Payment System | HIPPS |
+| Current Dental Terminology | CDT | 
+| Charge Description Master (chargemaster) | CDM | 
+| TriCare Diagnosis Related Groups | TRIS-DRG | 
+
+### Optional Column Headers
+Two additional data elements: `financial_aid_policy` and `billing_class` are optional headers. They are not required to be included but instructions have been added to support standardization of disclosure of these data elements for hospitals that wish to provide more contextual information about their charges. If `financial_aid_policy` is included in the MRF, we recommend it  be included with the General Data Elements on the first row. If `billing_class` header is included in the MRF, we recommend it be included on the third row.
+
+| Column Header (Tall format) | Column Header (Wide format) | Name | Type | Definition | Blanks Accepted |
+| ----- | ---- | ---- |  ---- | ---------- | -------- |
+| **financial_aid_policy** | **financial_aid_policy** | Hospital Financial Aid Policy | String | The hospital’s financial aid policy. See [additional financial aid policy notes](#additional-notes-on-financial_aid_policy) for more details. | Yes |
+| **billing_class**  | **billing_class** | Billing Class| Enum | The type of billing for the item/service at the established standard charge. The valid values are "professional", "facility", and "both". | Yes |
+
+#### Additional Notes on `financial_aid_policy`
+The hospital’s financial aid policy, also known as charity care or bill forgiveness, that a hospital may choose or be required to apply to a particular individual’s bill. This information may be displayed as either a description or as a link to the financial aid or cash price policy on the hospital’s website.
