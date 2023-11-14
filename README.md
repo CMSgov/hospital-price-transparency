@@ -82,9 +82,9 @@ In the CY2024 OPPS/ASC final rule, CMS finalized a requirement for hospitals to 
 ##### Coding Information
 | Requirement | Regulation cite* | Compliance Date |
 | ------------- | --------------- | --------------- |
-| Billing/Accounting Code | [45 CFR § 180.50 (b)(2)(iV)(A)](#-cfr-timing-information) | July 1, 2024 |
+| Billing/Accounting Code | [45 CFR § 180.50 (b)(2)(iv)(A)](#-cfr-timing-information) | July 1, 2024 |
 | Code Type | [45 CFR § 180.50 (b)(2)(iv)(B)](#-cfr-timing-information) | July 1, 2024 |
 | Modifiers | [45 CFR § 180.50 (b)(2)(iv)(C)](#-cfr-timing-information) | January 1, 2025 |
 
 ##### * CFR Timing Information
-As amended in the CY2024 OPPS ASC Final Rule, effective January 1, 2024.
+As amended in the CY2024 OPPS ASC Final Rule, effective January 1, 2024. Links in the above table will be updated once the final rule is published in the eCFR.
