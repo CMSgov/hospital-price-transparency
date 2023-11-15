@@ -4,6 +4,7 @@
 This technical implementation guide contains data dictionaries, CSV templates, and JSON schema for the machine readable files as required by the [Hospital Price Transparency](https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency) final rules ([45 CFR 180](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180)).
 
 If you are looking for the technical implementation guide for the machine readable files required by the [Transparency in Coverage](https://www.cms.gov/priorities/key-initiatives/healthplan-price-transparency) final rules (85 FR 72158), please go to https://github.com/CMSgov/price-transparency-guide.
+
 Overview
 ========
 
