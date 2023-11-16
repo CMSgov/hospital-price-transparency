@@ -230,7 +230,7 @@
                     "exclusiveMinimum": 0
                 },
                 "standard_charge_algorithm": {
-                    "type": "number",
+                    "type": "string",
                     "exclusiveMinimum": 0
                 },
                 "standard_charge_percentage": {
