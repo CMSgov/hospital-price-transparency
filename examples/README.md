@@ -1,4 +1,4 @@
-| Scenario | Reference in Wide CSV Format Example | Reference in Tall CSV Format Example | Reference in JSON Format Example |
+| Scenario | Reference in [Wide CSV Format Example](CSV/Wide%20Template%20Examples) | Reference in [Tall CSV Format Example](CSV/Tall%20Template%20Examples) | Reference in [JSON Format Example](JSON/) |
 | ----- | ---- | ---- | ---------- |
 | Multiple hospital locations | Row 2, `hospital_location` | Row 2, `hospital_location` | Lines 5-7 |
 | Case rate: MS-DRG algorithm displayed multiple ways | Rows 4-6, Platform Health Insurance PPO | Rows 4-6 | Lines 41-62 |
