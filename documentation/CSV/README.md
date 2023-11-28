@@ -96,7 +96,8 @@ There are four different types of placeholders in the MRF: `[state]`, `[i]`, `[p
 * `[state]` must be replaced by the 2-letter state code such as CA or NY. For example, the column header on row 1, `license_number|[state]` would be updated to `license_number|CA` for a hospital licensed by the state of California.
 * `[i]` is a CSV header placeholder that must be replaced with numbers starting at “1”, increasing by one to however many columns of codes are needed, and matching the associated code type header. For example, if two code and code type combinations are needed, the first header is `code|1` and the second header is `code|2`.
 * `[plan_name]` must be replaced by the specific plan name for the payer with whom the hospital has negotiated a payer-specific negotiated charge.
-* `[payer_name]` must be replaced by the name of the payer with whom the hospital has negotiated a payer-specific negotiated charge. See examples of how to update [placeholders here](../../examples/CSV).
+* `[payer_name]` must be replaced by the name of the payer with whom the hospital has negotiated a payer-specific negotiated charge.
+* See examples of how to update [placeholders here](../../examples/CSV).
 
 ##### Additional Standard Charge Methodology Notes
 The `methodology` data element describes the method used by the hospital to establish a payer-specific negotiated charge. Below are definitions for the valid values for the `methodology` data element and illustrative examples for how to represent unique contracting scenarios in combination with other data elements.
