@@ -7,3 +7,8 @@
 | Fee schedule: Standard charge is a percent of a common fee schedule where the standard charge dollar amount cannot be calculated | Row 7, Region Health Insurance HMO  | Row 9 | Lines 99-104 |
 | Per diem: Standard charge does not vary with length of stay | Row 8, Platform Health Insurance PPO | Row 10 | Lines 127-130 |
 | Per diem: Standard charges based on length of stay | Rows 9-11, Region Health Insurance HMO | Rows 11-13 | Lines 133-151 |
+
+
+#### Additional Notes
+* To view the raw CSV file, select “Raw” at the top of the example.
+* The CSV examples present the data headers in row three in an order that differs from the CSV templates. Changing the order of the data headers will not generate a deficiency.

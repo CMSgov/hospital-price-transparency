@@ -1,6 +1,6 @@
 ### Hospital Machine-Readable File Data Dictionary
-The following is documentation for those who wish to build a CSV file to satisfy 45 CFR 180.50 requirements. This documentation has information in how to disclose data elements for both the ["Tall"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0%20HPT%20CSV%20Sample%20Format%20(Tall).csv) and
-["Wide"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0%20HPT%20CSV%20Sample%20Format%20(Wide).csv) CSV format. 
+The following is documentation for those who wish to build a CSV file to satisfy 45 CFR 180.50 requirements. This documentation has information in how to disclose data elements for both the ["Tall"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0_Tall_CSV_Format_Template.csv) and
+["Wide"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0_Wide_CSV_Format_Template.csv) CSV format. 
 
 General CSV Instructions
 ========================
@@ -34,7 +34,7 @@ If the MRF contains identical standard charges for multiple hospital locations, 
 The affirmation data element for CSV will require the following text in the column header: 
 > To the best of its knowledge and belief, the hospital has included all applicable standard charge information in accordance with the requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date indicated.   
 
-The value to be encoded by the hospital will either be "true" or "false". Please see the column header in the CSV template [here](templates/V2.0.0%20HPT%20CSV%20Sample%20Format%20(Tall).csv)
+The value to be encoded by the hospital will either be "true" or "false". Please see the column header in the CSV template [here](templates/V2.0.0_Tall_CSV_Format_Template.csv)
 
 ### Required Standard Charge, Item/Service, and Coding Data Elements
 After the general data elements have been disclosed, the disclosure of required standard charges, item/service, and coding data elements  will begin on row 3.
