@@ -10,5 +10,5 @@
 
 
 #### Additional Notes
-* To view the raw CSV file, select “Raw” at the top of the example.
+* To view the raw CSV file, select “Code” at the top of the example.
 * The CSV examples present the data headers in row three in an order that differs from the CSV templates. Changing the order of the data headers will not generate a deficiency.
