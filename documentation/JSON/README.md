@@ -9,7 +9,7 @@ Developers of MRFs should generally consider and adopt established standards and
 * All "Numeric" data elements must be positive numbers. Entering a negative number or "0" will generate a deficiency.
 
 ### JSON Data Attributes
-The root object contains general data attirbutes (meta-data) about the hospital and the data being disclosed about the hospital and MRF.
+The root object contains general data attributes (meta-data) about the hospital and the data being disclosed about the hospital and MRF.
 
 | Attribute | Name | Type | Definition | Required |
 | ----- | ---- | ---- | ---------- | -------- |
@@ -19,7 +19,7 @@ The root object contains general data attirbutes (meta-data) about the hospital 
 | **hospital_location** | Hospital Location(s) | Array | An array of strings of the unique name of the hospital location absent any acronyms. | Yes |
 | **hospital_address** | Hospital Address(es) | Array | An array of strings of the physical address(es) of the corresponding hospital location attribute. Address(es) must be included for, at minimum, all inpatient facilities and stand-alone emergency departments. | Yes |
 | **license_information** | Hospital Licensure Information | Object | The [hospital licensure object](#hospital-licensure-object) contains license information for the reported hospital.  | Yes |
-| **affirmation** | Affirmation Statement | Object | The [affirmation object](#affirmation-object) contains the CMS defined affirmation statement with the hospital name that the information displayed is true, accurate, and complete as of the date indicated in the file. | Yes |
+| **affirmation** | Affirmation Statement | Object | The [affirmation object](#affirmation-object) contains the CMS defined affirmation statement that the information displayed is true, accurate, and complete as of the date indicated in the file. | Yes |
 | **standard_charge_information** | Standard Charge Information | Array | This array contains a list of the [standard charge information objects](#standard-charge-information-object) for all of the items and services that are required to be disclosed. | No |
 | **modifier_information** | Modifier Information | Array | An array of [modifier information objects](#modifier-information-object). |  No |
 
@@ -35,7 +35,7 @@ The following object requires the following statement for the `affirmation` attr
 > To the best of its knowledge and belief, the hospital has included all applicable standard charge information in accordance with the
  requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date indicated.
 
-An example of this would:
+An [example](../../examples/JSON/V2.0.0%20JSON%20Format%20Example.json) of this would:
 ```json
 {
  "affirmation": "To the best of its knowledge and belief, the hospital has included all applicable standard charge information in accordance with the requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date indicated.",

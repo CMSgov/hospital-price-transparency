@@ -1,6 +1,6 @@
 ### Hospital Machine-Readable File Data Dictionary
-The following is documentation for those who wish to build a CSV file to satisfy 45 CFR 180.50 requirements. This documentation has information in how to disclose data elements for both the ["Tall"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0%20HPT%20CSV%20Sample%20Format%20(Tall).csv) and
-["Wide"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0%20HPT%20CSV%20Sample%20Format%20(Wide).csv) CSV format. 
+The following is documentation for those who wish to build a CSV file to satisfy 45 CFR 180.50 requirements. This documentation has information in how to disclose data elements for both the ["Tall"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0%20HPT%20CSV%20Sample%20Format%20(Tall).csv) and
+["Wide"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0%20HPT%20CSV%20Sample%20Format%20(Wide).csv) CSV format. 
 
 General CSV Instructions
 ========================
@@ -12,7 +12,7 @@ For CSV, hospitals may choose either a “wide” or “tall” layout. The CSV 
 * Encode valid values as instructed below. Values encoded incorrectly will generate a deficiency.
   * For example, if the valid value is ‘numeric’ (such as for Payer-Specific Negotiated Charge: Dollar Amount), inserting anything other than a number (such as inserting a dollar sign with a number) will generate a deficiency.  Similarly, if the valid value is ‘enum’ (such as for Code Type), inserting anything other than the values indicated (such as inserting ‘other’) will generate a deficiency.
   * All "Numeric" data elements must be positive numbers. Entering a negative number or "0" will generate a deficiency. 
-* While GitHub examples exclude leading and trailing spaces in headers, valid values, and around pipes, inadvertently inserting spaces will not generate a deficiency. Similarly, while GitHub examples may use capital and lower-case letters, valid values are case-insensitive and changes in capital vs lower-case letters will not generate a deficiency.
+* While [GitHub examples](../../examples/CSV) exclude leading and trailing spaces in headers, valid values, and around pipes, inadvertently inserting spaces will not generate a deficiency. Similarly, while [GitHub examples](../../examples/CSV) may use capital and lower-case letters, valid values are case-insensitive and changes in capital vs lower-case letters will not generate a deficiency.
 * Hospitals are permitted to include additional optional information through optional data elements that are defined in the data dictionary (e.g., billing class and hospital financial aid policy) or hospital created data elements. Follow the technical instructions for including the defined optional data elements.
 
 ### General Data Elements
@@ -28,13 +28,13 @@ These required general data about the MRF must be stated once at the top of the 
 | **Header is [Affirmation Statement](#additional-affirmation-notes)** | **Header is [Affirmation Statement](#additional-affirmation-notes)** | Affirmation Statement | Boolean | Required affirmation statement. Valid values: `true` and `false`. See [additional affirmation notes](#additional-affirmation-notes) for more details. | No |
 
 #### Additional Notes on `hospital_address`
-If the MRF contains identical standard charges for multiple hospital locations, separate the address of each location with a “|”. List the addresses in the same sequential order as the `hospital_location` values for the data element above. Address(es) must be included for, at minimum, all inpatient facilities and stand-alone emergency departments. Each hospital location operating under a single hospital license (or approval) that has a different set of standard charges than the other location(s) operating under the same hospital license (or approval) must separately make public the standard charges applicable to that location.
+If the MRF contains identical standard charges for multiple hospital locations, separate the address of each location with a “|”. List the addresses in the same sequential order as the `hospital_location` values for the data element above [(see examples)](../../examples/CSV). Address(es) must be included for, at minimum, all inpatient facilities and stand-alone emergency departments. Each hospital location operating under a single hospital license (or approval) that has a different set of standard charges than the other location(s) operating under the same hospital license (or approval) must separately make public the standard charges applicable to that location.
 
 #### Additional Affirmation Notes
 The affirmation data element for CSV will require the following text in the column header: 
 > To the best of its knowledge and belief, the hospital has included all applicable standard charge information in accordance with the requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date indicated.   
 
-The value to be encoded by the hospital will either be "true" or "false". Please see the column header in the CSV template [here](templates/V2.0%20HPT%20CSV%20Sample%20Format%20(Tall).csv)
+The value to be encoded by the hospital will either be "true" or "false". Please see the column header in the CSV template [here](templates/V2.0.0%20HPT%20CSV%20Sample%20Format%20(Tall).csv)
 
 ### Required Standard Charge, Item/Service, and Coding Data Elements
 After the general data elements have been disclosed, the disclosure of required standard charges, item/service, and coding data elements  will begin on row 3.
@@ -96,7 +96,7 @@ There are four different types of placeholders in the MRF: `[state]`, `[i]`, `[p
 * `[state]` must be replaced by the 2-letter state code such as CA or NY. For example, the column header on row 1, `license_number|[state]` would be updated to `license_number|CA` for a hospital licensed by the state of California.
 * `[i]` is a CSV header placeholder that must be replaced with numbers starting at “1”, increasing by one to however many columns of codes are needed, and matching the associated code type header. For example, if two code and code type combinations are needed, the first header is `code|1` and the second header is `code|2`.
 * `[plan_name]` must be replaced by the specific plan name for the payer with whom the hospital has negotiated a payer-specific negotiated charge.
-* `[payer_name]` must be replaced by the name of the payer with whom the hospital has negotiated a payer-specific negotiated charge.
+* `[payer_name]` must be replaced by the name of the payer with whom the hospital has negotiated a payer-specific negotiated charge. See examples of how to update [placeholders here](../../examples/CSV).
 
 ##### Additional Standard Charge Methodology Notes
 The `methodology` data element describes the method used by the hospital to establish a payer-specific negotiated charge. Below are definitions for the valid values for the `methodology` data element and illustrative examples for how to represent unique contracting scenarios in combination with other data elements.
