@@ -35,7 +35,7 @@ The following object requires the following statement for the `affirmation` attr
 > To the best of its knowledge and belief, the hospital has included all applicable standard charge information in accordance with the
  requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date indicated.
 
-An [example](../../examples/JSON/V2.0.0%20JSON%20Format%20Example.json) of this would:
+An [example](../../examples/JSON/V2.0.0%20JSON%20Format%20Example.json) of this would be:
 ```json
 {
  "affirmation": "To the best of its knowledge and belief, the hospital has included all applicable standard charge information in accordance with the requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date indicated.",
