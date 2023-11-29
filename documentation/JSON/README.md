@@ -1,15 +1,15 @@
 ### Hospital Machine-Readable JSON Schema
-The following is documentation for those who wish to build a JSON file to satisfy 45 CFR 180.50 requirements. This documentation has information in how to disclose data elements for the [JSON schema](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/JSON/hospital-price-transparency-schema.json).
+The following is documentation for those who wish to build a JSON file to satisfy 45 CFR 180.50 requirements. This documentation has information in how to disclose data elements for the [JSON schema](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/JSON/V2.0.0_Hospital_price_transparency_schema.json).
 
 General JSON Instructions
 =========================
-Developers of MRFs should generally consider and adopt established standards and industry norms for JSON files when creating the MRF. For more information on the JSON schema standards visit https://www.json.org/json-en.html, https://json-schema.org/. Additional details and instructions specific to JSON may be found in the [JSON schema](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/JSON/hospital-price-transparency-schema.json). Below are additional reminders to avoid common errors in MRFs:
+Developers of MRFs should generally consider and adopt established standards and industry norms for JSON files when creating the MRF. For more information on the JSON schema standards visit https://www.json.org/json-en.html, https://json-schema.org/. Additional details and instructions specific to JSON may be found in the [JSON schema](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/JSON/V2.0.0_Hospital_price_transparency_schema.json). Below are additional reminders to avoid common errors in MRFs:
 * Encode valid values as instructed below. Values encoded incorrectly will generate a deficiency. For example, insert numeric values only for Payer-Specific Negotiated Charge: Dollar Amount; inserting a  dollar sign with a number will generate a deficiency.
 * Hospitals are permitted to include additional information through optional data elements that are defined in the data dictionary (e.g., billing class and hospital financial aid policy) or hospital created data attributes. Follow the technical instructions for the defined optional data elements and where to insert hospital defined optional data elements.
 * All "Numeric" data elements must be positive numbers. Entering a negative number or "0" will generate a deficiency.
 
 ### JSON Data Attributes
-The root object contains general data attirbutes (meta-data) about the hospital and the data being disclosed about the hospital and MRF.
+The root object contains general data attributes (meta-data) about the hospital and the data being disclosed about the hospital and MRF.
 
 | Attribute | Name | Type | Definition | Required |
 | ----- | ---- | ---- | ---------- | -------- |
@@ -19,7 +19,7 @@ The root object contains general data attirbutes (meta-data) about the hospital 
 | **hospital_location** | Hospital Location(s) | Array | An array of strings of the unique name of the hospital location absent any acronyms. | Yes |
 | **hospital_address** | Hospital Address(es) | Array | An array of strings of the physical address(es) of the corresponding hospital location attribute. Address(es) must be included for, at minimum, all inpatient facilities and stand-alone emergency departments. | Yes |
 | **license_information** | Hospital Licensure Information | Object | The [hospital licensure object](#hospital-licensure-object) contains license information for the reported hospital.  | Yes |
-| **affirmation** | Affirmation Statement | Object | The [affirmation object](#affirmation-object) contains the CMS defined affirmation statement with the hospital name that the information displayed is true, accurate, and complete as of the date indicated in the file. | Yes |
+| **affirmation** | Affirmation Statement | Object | The [affirmation object](#affirmation-object) contains the CMS defined affirmation statement that the information displayed is true, accurate, and complete as of the date indicated in the file. | Yes |
 | **standard_charge_information** | Standard Charge Information | Array | This array contains a list of the [standard charge information objects](#standard-charge-information-object) for all of the items and services that are required to be disclosed. | No |
 | **modifier_information** | Modifier Information | Array | An array of [modifier information objects](#modifier-information-object). |  No |
 
@@ -35,7 +35,7 @@ The following object requires the following statement for the `affirmation` attr
 > To the best of its knowledge and belief, the hospital has included all applicable standard charge information in accordance with the
  requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date indicated.
 
-An example of this would:
+An [example](../../examples/JSON/V2.0.0_JSON_Format_Example.json) of this would be:
 ```json
 {
  "affirmation": "To the best of its knowledge and belief, the hospital has included all applicable standard charge information in accordance with the requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date indicated.",
