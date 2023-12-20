@@ -15,6 +15,8 @@ For CSV, hospitals may choose either a “wide” or “tall” layout. The CSV 
 * While [GitHub examples](../../examples/CSV) exclude leading and trailing spaces in headers, valid values, and around pipes, inadvertently inserting spaces will not generate a deficiency. Similarly, while [GitHub examples](../../examples/CSV) may use capital and lower-case letters, valid values are case-insensitive and changes in capital vs lower-case letters will not generate a deficiency.
 * Hospitals are permitted to include additional optional information through optional data elements that are defined in the data dictionary (e.g., billing class and hospital financial aid policy) or hospital created data elements. Follow the technical instructions for including the defined optional data elements.
 
+Encode the headers and valid values according to the data element implementation timeline in the HPT regulation (45 CFR § 180.50) as finalized in the CY2024 OPPS/ASC final rule.
+
 ### General Data Elements
 These required general data about the MRF must be stated once at the top of the file (i.e. the first row).
 
