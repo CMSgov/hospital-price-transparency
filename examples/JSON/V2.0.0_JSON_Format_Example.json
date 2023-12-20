@@ -153,6 +153,46 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Treatment or observation room — observation room",
+      "code_information": [
+        {
+          "code": "762",
+          "type": "RC"
+        }
+      ],
+      "standard_charges": [
+        {
+          "gross_charge": 13000,
+          "discounted_cash": 12000,
+          "minimum": 8000,
+          "maximum": 10000,
+          "setting": "outpatient",
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "standard_charge_dollar": 8000,
+              "methodology": "case rate",
+              "additional_payer_notes": "Negotiated standard charge without surgery and without rule out myocardial infarction"
+            },
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "standard_charge_dollar": 10000,
+              "methodology": "case rate",
+              "additional_payer_notes": "Negotiated standard charge without surgery and with rule out myocardial infarction"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "standard_charge_dollar": 9000,
+              "methodology": "case rate"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
