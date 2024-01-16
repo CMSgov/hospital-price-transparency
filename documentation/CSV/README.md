@@ -1,5 +1,5 @@
 ### Hospital Machine-Readable File Data Dictionary
-The following is documentation for those who wish to build a CSV file to satisfy 45 CFR 180.50 requirements. This documentation has information in how to disclose data elements for both the ["Tall"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0_Tall_CSV_Format_Template.csv) and
+The following is documentation for those who wish to build a CSV file to satisfy [45 CFR 180.50](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50) requirements. This documentation has information in how to disclose data elements for both the ["Tall"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0_Tall_CSV_Format_Template.csv) and
 ["Wide"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0_Wide_CSV_Format_Template.csv) CSV format. 
 
 General CSV Instructions
@@ -15,7 +15,7 @@ For CSV, hospitals may choose either a “wide” or “tall” layout. The CSV 
 * While [GitHub examples](../../examples/CSV) exclude leading and trailing spaces in headers, valid values, and around pipes, inadvertently inserting spaces will not generate a deficiency. Similarly, while [GitHub examples](../../examples/CSV) may use capital and lower-case letters, valid values are case-insensitive and changes in capital vs lower-case letters will not generate a deficiency.
 * Hospitals are permitted to include additional optional information through optional data elements that are defined in the data dictionary (e.g., billing class and hospital financial aid policy) or hospital created data elements. Follow the technical instructions for including the defined optional data elements.
 
-Encode the headers and valid values according to the data element implementation timeline in the HPT regulation (45 CFR § 180.50) as finalized in the CY2024 OPPS/ASC final rule.
+Encode the headers and valid values according to the data element implementation timeline in the HPT regulation ([45 CFR § 180.50](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50)) as finalized in the [CY2024 OPPS/ASC](https://www.federalregister.gov/documents/2023/11/22/2023-24293/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment) final rule.
 
 ### General Data Elements
 These required general data about the MRF must be stated once at the top of the file (i.e. the first row).

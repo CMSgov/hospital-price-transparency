@@ -1,5 +1,5 @@
 ### Hospital Machine-Readable JSON Schema
-The following is documentation for those who wish to build a JSON file to satisfy 45 CFR 180.50 requirements. This documentation has information in how to disclose data elements for the [JSON schema](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/JSON/V2.0.0_Hospital_price_transparency_schema.json).
+The following is documentation for those who wish to build a JSON file to satisfy [45 CFR 180.50](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50) requirements. This documentation has information in how to disclose data elements for the [JSON schema](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/JSON/V2.0.0_Hospital_price_transparency_schema.json).
 
 General JSON Instructions
 =========================
