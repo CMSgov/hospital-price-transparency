@@ -275,14 +275,10 @@
             "format": "date"
         },
         "affirmation": {
-            "items": {
-                "$ref": "#/definitions/affirmation"
-            }
+            "$ref": "#/definitions/affirmation"
         },
         "license_information": {
-            "items": {
-                "$ref": "#/definitions/license_information"
-            }
+            "$ref": "#/definitions/license_information"
         },
         "version": {
             "type": "string"
