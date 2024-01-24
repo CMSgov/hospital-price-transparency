@@ -1,4 +1,4 @@
-### Hospital Machine-Readable JSON Schema
+# Hospital Machine-Readable JSON Schema
 The following is documentation for those who wish to build a JSON file to satisfy [45 CFR 180.50](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50) requirements. This documentation has information in how to disclose data elements for the [JSON schema](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/JSON/V2.0.0_Hospital_price_transparency_schema.json).
 
 General JSON Instructions
@@ -8,7 +8,7 @@ Developers of MRFs should generally consider and adopt established standards and
 * Hospitals are permitted to include additional information through optional data elements that are defined in the data dictionary (e.g., billing class and hospital financial aid policy) or hospital created data attributes. Follow the technical instructions for the defined optional data elements and where to insert hospital defined optional data elements.
 * All "Numeric" data elements must be positive numbers. Entering a negative number or "0" will generate a deficiency.
 
-### JSON Data Attributes
+## JSON Data Attributes
 The root object contains general data attributes (meta-data) about the hospital and the data being disclosed about the hospital and MRF.
 
 | Attribute                       | Name                           | Type   | Description                                                                                                                                                                                                     | Required |
@@ -23,14 +23,14 @@ The root object contains general data attributes (meta-data) about the hospital 
 | **standard_charge_information** | Standard Charge Information    | Array  | This array contains a list of the [standard charge information objects](#standard-charge-information-object) for all of the items and services that are required to be disclosed.                               | No       |
 | **modifier_information**        | Modifier Information           | Array  | An array of [modifier information objects](#modifier-information-object).                                                                                                                                       | No       |
 
-#### Affirmation Object
+## Affirmation Object
 
 | Attribute               | Name                | Type    | Description                                                                          | Required |
 |-------------------------|---------------------|---------|--------------------------------------------------------------------------------------|----------|
 | **affirmation**         | Affirmation         | String  | This attribute is required to contain the [valid text only](#affirmation-statement). | Yes      |
 | **confirm_affirmation** | Confirm Affirmation | Boolean | A "true" or "false" value to be entered by the hospital.                             | Yes      |
 
-##### Affirmation Statement
+### Affirmation Statement
 The following object requires the following statement for the `affirmation` attribute:
 > To the best of its knowledge and belief, the hospital has included all applicable standard charge information in accordance with the
  requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date indicated.
@@ -43,14 +43,14 @@ An [example](../../examples/JSON/V2.0.0_JSON_Format_Example.json) of this would 
  }
 ```
 
-#### Hospital Licensure Object
+## Hospital Licensure Object
 
 | Attribute          | Name           | Type   | Description                                                                                       | Required |
 |--------------------|----------------|--------|---------------------------------------------------------------------------------------------------|----------|
 | **license_number** | License Number | String | The hospital license number. If the hospital does not have a license number, omit this attribute. | No       |
 | **state**          | State          | Enum   | The two-letter state code (e.g. CA, NY).                                                          | Yes      |
 
-#### Standard Charge Information Object
+## Standard Charge Information Object
 
 | Attribute            | Name                | Type   | Description                                                                                                                                 | Required |
 |----------------------|---------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------|----------|
@@ -59,21 +59,21 @@ An [example](../../examples/JSON/V2.0.0_JSON_Format_Example.json) of this would 
 | **code_information** | Code Information    | Array  | An array of [code information objects](#code-information-object) that contains information about accounting or billing codes                | Yes      |
 | **standard_charges** | Standard Charges    | Array  | An array of [standard charge objects](#standard-charge-object) that contain information about the standard charge for each item and service | Yes      |
 
-#### Drug Information Object
+## Drug Information Object
 
 | Attribute | Name | Type   | Description                                                                                                                                                                                                                                                 | Required |
 |-----------|------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **unit**  | Unit | String | The unit value that corresponds to the established standard charge for drugs.                                                                                                                                                                               | Yes      |
 | **type**  | Type | Enum   | The measurement type that corresponds to the established standard charge for drugs as defined by either the National Drug Code or the National Council for Prescription Drug Programs. The [list](#additional-notes-for-drug-types-values) of valid values. | Yes      |
 
-#### Code Information Object
+## Code Information Object
 
 | Attribute | Name | Type   | Description                                                                                                                               | Required |
 |-----------|------|--------|-------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **code**  | Code | String | Any code used by the hospital for purposes of billing or accounting for the item or service.                                              | Yes      |
 | **type**  | Type | Enum   | The associated coding type for the ‘Code’ data element. Please see a list of the [valid values](#additional-notes-concerning-code-types). | Yes      |
 
-#### Standard Charge Object
+## Standard Charge Object
 
 | Attribute                    | Name                     | Type    | Description                                                                                                                                                                      | Required |
 |------------------------------|--------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
@@ -85,7 +85,7 @@ An [example](../../examples/JSON/V2.0.0_JSON_Format_Example.json) of this would 
 | **payers_information**       | Payer Information        | Array   | An array of [payers information objects](#payers-information-object) that describe the standard charges specific to each payer for each item and service.                        | No       |
 | **additional_generic_notes** | Additional Generic Notes | String  | A free text data element to help explain any of the data including charity care policies or other contextual information that aids in the comprehension of the standard charges. | No       |
 
-#### Modifier Information Object
+## Modifier Information Object
 
 | Attribute                      | Name                       | Type   | Description                                                            | Required |
 |--------------------------------|----------------------------|--------|------------------------------------------------------------------------|----------|
@@ -93,7 +93,7 @@ An [example](../../examples/JSON/V2.0.0_JSON_Format_Example.json) of this would 
 | **code**                       | Code                       | String | The modifier code (e.g. 50)                                            | Yes      |
 | **modifier_payer_information** | Modifier Payer Information | Array  | An array of [modifier payer information](#modifier-payer-information). | Yes      |
 
-#### Modifier Payer Information
+## Modifier Payer Information
 
 | Attribute       | Name        | Type   | Description                                                                                                                                                                     | Required |
 |-----------------|-------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
@@ -101,7 +101,7 @@ An [example](../../examples/JSON/V2.0.0_JSON_Format_Example.json) of this would 
 | **plan_name**   | Plan Name   | String | The name of the payer’s specific plan associated with the standard charge.                                                                                                      | Yes      |
 | **description** | Description | String | Description of how the modifier(s) may change the standard charge that corresponds to hospital item or services (e.g., modifier applies 150% change to standard charge amount). | Yes      |
 
-#### Payers Information Object
+## Payers Information Object
 
 | Attribute                      | Name                                            | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                              | Required |
 |--------------------------------|-------------------------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
@@ -114,14 +114,14 @@ An [example](../../examples/JSON/V2.0.0_JSON_Format_Example.json) of this would 
 | **estimated_amount**           | Estimated Amount                                | Numeric | Estimated allowed amount means the average dollar amount that the hospital estimates it will be paid by a third party payer for an item or service. If the standard charge is based on a percentage or algorithm, the MRF must also specify the estimated allowed amount for that item or service. See [additional estimated amount notes](#additional-notes-for-estimated_amount) for more information. | No       |
 | **methodology**                | Standard Charge Methodology                     | Enum    | The type of contract arrangement associated with the payer-specific negotiated charge. See [additional standard charge methodology notes](#additional-standard-charge-methodology-notes) notes for more information on the valid values.                                                                                                                                                                 | Yes      |
 
-##### Additional Notes for percentage
+### Additional Notes for percentage
 
 This data element should be encoded only when the payer-specific negotiated charge has been established as a percentage and no dollar amount can be calculated. This data element will contain the numeric representation of the percentage not as a decimal (70.5% is to be entered as “70.5” and not “.705”). If you encode information for this data element, you must also calculate and display the estimated allowed amount for that item or service as a separate data element.
 
-##### Additional Notes for `estimated_amount`
+### Additional Notes for `estimated_amount`
 CMS recommends that the hospital encode 999999999 (nine 9s) in the data element value to indicate that there is not sufficient historic claims history to derive the estimated allowed amount, and then update the file when sufficient history is available. As a guide for the threshold for sufficient history, we suggest hospitals use [the CMS Cell Suppression Policy](https://www.hhs.gov/guidance/document/cms-cell-suppression-policy) established in January, 2020. Additionally if the hospital wishes to provide further context for the lack of data they can do so in the appropriate additional notes field.
 
-##### Additional Notes for `Drug Types` Values
+### Additional Notes for `Drug Types` Values
 The following valid values for `type` are based on two sets of industry standards; National Drug Code and National Council for Prescription Drug Programs.
 
 | Standard Name | Reporting Value | 
@@ -135,7 +135,7 @@ The following valid values for `type` are based on two sets of industry standard
 | GM | Gram | 
 
 
-##### Additional Notes Concerning Code Types
+### Additional Notes Concerning Code Types
 Hospital items and services may be associated with a variety of billing codes or accounting codes. Examples include Current Procedural Terminology (CPT), Healthcare Common Procedure Coding System (HCPCS), National Drug Code (NDC), Revenue Center (RC) code, or other common payer identifier. The list of valid values is in the following table with the name of the standard and the associated valid values.
 
 The value "LOCAL" may be used for internal accounting codes in conjunction with another billing code for that item or service. However, if no other code types are available for a particular item or service, "LOCAL" may be used as a valid value.
@@ -162,7 +162,7 @@ The value "LOCAL" may be used for internal accounting codes in conjunction with 
 | Charge Description Master (chargemaster) | CDM |
 | TriCare Diagnosis Related Groups | TRIS-DRG |
 
- ##### Additional Standard Charge Methodology Notes
+### Additional Standard Charge Methodology Notes
 The `methodology` data element describes the method used by the hospital to establish a payer-specific negotiated charge. Below are descriptions for the valid values for the `methodology` data element and illustrative examples for how to represent unique contracting scenarios in combination with other data elements.
 
 * `case rate`: A flat rate for a package of items and services triggered by a diagnosis, treatment, or condition for a designated length of time.
@@ -171,7 +171,7 @@ The `methodology` data element describes the method used by the hospital to esta
 * `per diem`: The per day charge for providing hospital items and services.
 * `other`: If the standard charge methodology used to establish a payer-specific negotiated charge cannot be described by one of the types of standard charge methodology above, select ‘other’ and encode a detailed explanation of the contracting arrangement in the `additional_payer_notes` data attribute.
 
-### Optional Data Attributes
+## Optional Data Attributes
 Two additional data attributes: `financial_aid_policy` and `billing_class` are optional data attributes. They are not required to be included but instructions have been added to support standardization of disclosure of these data attributes for hospitals that wish to provide more contextual information about their charges. If `financial_aid_policy` is included in the MRF, it is to be included to the [root node](#json-data-attributes). If `billing_class` attribute is included in the MRF, it is to be added to the [standard charge object](#standard-charge-object).
 
 | Attribute                | Name                          | Type   | Description                                                                                                                                   | Required |
@@ -179,5 +179,12 @@ Two additional data attributes: `financial_aid_policy` and `billing_class` are o
 | **financial_aid_policy** | Hospital Financial Aid Policy | String | The hospital’s financial aid policy. See [additional financial aid policy notes](#additional-notes-on-financial_aid_policy) for more details. | No       |
 | **billing_class**        | Billing Class                 | Enum   | The type of billing for the item/service at the established standard charge. The valid values are "professional", "facility", and "both".     | No       |
 
-#### Additional Notes on `financial_aid_policy`
+### Additional Notes on `financial_aid_policy`
 The hospital’s financial aid policy, also known as charity care or bill forgiveness, that a hospital may choose or be required to apply to a particular individual’s bill. This information may be displayed as either a description or as a link to the financial aid or cash price policy on the hospital’s website.
+
+## Conditional Requirements 
+The following conditional requirements must be met for an MRF to be considered valid. These conditional requirements enforce regulatory rules for required data elements, provide flexibility in the development of MRFs, and ensure corresponding information is encoded for items and services to be understandable by the end user.
+1. If the "standard charge methodology" encoded value is "other", there must be a corresponding explanation found in the "additional notes" for the associated payer-specific negotiated charge.
+1. If an item or service is encoded, a corresponding valid value must be encoded for at least one of the following: "Gross Charge", "Discounted Cash Price", "Payer-Specific Negotiated Charge: Dollar Amount", "Payer-Specific Negotiated Charge: Percentage", "Payer-Specific Negotiated Charge: Algorithm".
+1. If there is a "payer specific standard charge" encoded as a dollar amount, there must be a corresponding valid value encoded for the deidentified minimum and deidentified maximum negotiated charge data.
+1. If a "payer specific negotiated charge" can only be expressed as a percentage or algorithm, then a corresponding "Estimated Allowed Amount" must also be encoded. Required beginning 1/1/2025.  
