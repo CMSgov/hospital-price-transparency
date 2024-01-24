@@ -85,7 +85,7 @@ The following valid values for `drug_type_of_measurement` are based on two sets 
 | EA | Each | 
 | GM | Gram | 
 
-### `additional_generic_notes` Notes
+### Additional Generic Notes Notes
 If using the CSV Tall template, this data element can be used for both additional payer-specific and general information about the standard charge for an item or service.
 
 If using the CSV Wide template, use the ‘Additional Generic Notes’ data element for additional general information and use the ‘Additional Payer-Specific Notes’ data element for additional payer-specific information.
