@@ -5,7 +5,8 @@
             "type": "object",
             "properties": {
                 "code": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 "type": {
                     "enum": [
@@ -56,7 +57,8 @@
             "type": "object",
             "properties": {
                 "unit": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 "type": {
                     "enum": [
@@ -81,7 +83,8 @@
             "type": "object",
             "properties": {
                 "license_number": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 "state": {
                     "enum": [
@@ -142,10 +145,12 @@
             "type": "object",
             "properties": {
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 "code": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 "modifier_payer_information": {
                     "type": "array",
@@ -166,13 +171,16 @@
             "type": "object",
             "properties": {
                 "payer_name": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 "plan_name": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 }
             },
             "required": [
@@ -186,7 +194,8 @@
             "type": "object",
             "properties": {
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 "drug_information": {
                     "$ref": "#/definitions/drug_information"
@@ -217,10 +226,12 @@
             "type": "object",
             "properties": {
                 "payer_name": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 "plan_name": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 "additional_payer_notes": {
                     "type": "string"
@@ -230,8 +241,7 @@
                     "exclusiveMinimum": 0
                 },
                 "standard_charge_algorithm": {
-                    "type": "string",
-                    "exclusiveMinimum": 0
+                    "type": "string"
                 },
                 "standard_charge_percentage": {
                     "type": "number",
@@ -262,36 +272,36 @@
     "type": "object",
     "properties": {
         "hospital_name": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
         },
         "hospital_address": {
             "type": "array",
             "items": {
                 "type": "string"
-            }
+            },
+            "minItems": 1
         },
         "last_updated_on": {
             "type": "string",
             "format": "date"
         },
         "affirmation": {
-            "items": {
-                "$ref": "#/definitions/affirmation"
-            }
+            "$ref": "#/definitions/affirmation"
         },
         "license_information": {
-            "items": {
-                "$ref": "#/definitions/license_information"
-            }
+            "$ref": "#/definitions/license_information"
         },
         "version": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
         },
         "hospital_location": {
             "type": "array",
             "items": {
                 "type": "string"
-            }
+            },
+            "minItems": 1
         },
         "standard_charge_information": {
             "type": "array",
