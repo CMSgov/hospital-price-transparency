@@ -7,6 +7,7 @@ Developers of MRFs should generally consider and adopt established standards and
 * Encode valid values as instructed below. Values encoded incorrectly will generate a deficiency. For example, insert numeric values only for Payer-Specific Negotiated Charge: Dollar Amount; inserting a  dollar sign with a number will generate a deficiency.
 * Hospitals are permitted to include additional information through optional data elements that are defined in the data dictionary (e.g., billing class and hospital financial aid policy) or hospital created data attributes. Follow the technical instructions for the defined optional data elements and where to insert hospital defined optional data elements.
 * All "Numeric" data elements must be positive numbers. Entering a negative number or "0" will generate a deficiency.
+* Ensure all [conditional requirements](#conditional-requirements) are met for an MRF to be considered valid
 
 ## JSON Data Attributes
 The root object contains general data attributes (meta-data) about the hospital and the data being disclosed about the hospital and MRF.
@@ -182,7 +183,7 @@ Two additional data attributes: `financial_aid_policy` and `billing_class` are o
 ### Additional Notes on `financial_aid_policy`
 The hospital’s financial aid policy, also known as charity care or bill forgiveness, that a hospital may choose or be required to apply to a particular individual’s bill. This information may be displayed as either a description or as a link to the financial aid or cash price policy on the hospital’s website.
 
-## Conditional Requirements 
+## Conditional Requirements
 The following conditional requirements must be met for an MRF to be considered valid. These conditional requirements enforce regulatory rules for required data elements, provide flexibility in the development of MRFs, and ensure corresponding information is encoded for items and services to be understandable by the end user.
 1. If the "standard charge methodology" encoded value is "other", there must be a corresponding explanation found in the "additional notes" for the associated payer-specific negotiated charge.
 1. If an item or service is encoded, a corresponding valid value must be encoded for at least one of the following: "Gross Charge", "Discounted Cash Price", "Payer-Specific Negotiated Charge: Dollar Amount", "Payer-Specific Negotiated Charge: Percentage", "Payer-Specific Negotiated Charge: Algorithm".

@@ -12,6 +12,7 @@ For CSV, hospitals may choose either a “wide” or “tall” layout. The CSV 
   * All "Numeric" data elements must be positive numbers. Entering a negative number or "0" will generate a deficiency. 
 * While [GitHub examples](../../examples/CSV) exclude leading and trailing spaces in headers, valid values, and around pipes, inadvertently inserting spaces will not generate a deficiency. Similarly, while [GitHub examples](../../examples/CSV) may use capital and lower-case letters, valid values are case-insensitive and changes in capital vs lower-case letters will not generate a deficiency.
 * Hospitals are permitted to include additional optional information through optional data elements that are defined in the data dictionary (e.g., billing class and hospital financial aid policy) or hospital created data elements. Follow the technical instructions for including the defined optional data elements.
+* Ensure all [conditional requirements](#conditional-requirements) are met for an MRF to be considered valid
 
 Encode the headers and valid values according to the data element implementation timeline in the HPT regulation ([45 CFR § 180.50](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50)) as finalized in the [CY2024 OPPS/ASC](https://www.federalregister.gov/documents/2023/11/22/2023-24293/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment) final rule.
 
@@ -150,11 +151,11 @@ Two additional data elements: `financial_aid_policy` and `billing_class` are opt
 ### Additional Notes on `financial_aid_policy`
 The hospital’s financial aid policy, also known as charity care or bill forgiveness, that a hospital may choose or be required to apply to a particular individual’s bill. This information may be displayed as either a description or as a link to the financial aid or cash price policy on the hospital’s website.
 
-## Conditional Requirements 
+## Conditional Requirements
 The following conditional requirements must be met for an MRF to be considered valid. These conditional requirements enforce regulatory rules for required data elements, provide flexibility in the development of MRFs, and ensure corresponding information is encoded for items and services to be understandable by the end user.
 1. If a "payer specific negotiated charge" is encoded as a dollar amount, percentage, or algorithm then a corresponding valid value for the payer name, plan name, and standard charge methodology must also be encoded.
-1. If a standard charge is encoded, there must be a corresponding code and code type pairing. The code and code type pairing do not need to be in the first code and code type columns (i.e., `code|1` and `code|1|type`).
-1. If the "standard charge methodology" encoded value is "other", there must be a corresponding explanation found in the "additional notes" for the associated payer-specific negotiated charge.
-1. If an item or service is encoded, a corresponding valid value must be encoded for at least one of the following: "Gross Charge", "Discounted Cash Price", "Payer-Specific Negotiated Charge: Dollar Amount", "Payer-Specific Negotiated Charge: Percentage", "Payer-Specific Negotiated Charge: Algorithm".
-1. If there is a "payer specific standard charge" encoded as a dollar amount, there must be a corresponding valid value encoded for the deidentified minimum and deidentified maximum negotiated charge data.
-1. If a "payer specific negotiated charge" can only be expressed as a percentage or algorithm, then a corresponding "Estimated Allowed Amount" must also be encoded.  Required beginning 1/1/2025.  
+2. If a standard charge is encoded, there must be a corresponding code and code type pairing. The code and code type pairing do not need to be in the first code and code type columns (i.e., `code|1` and `code|1|type`).
+3. If the "standard charge methodology" encoded value is "other", there must be a corresponding explanation found in the "additional notes" for the associated payer-specific negotiated charge.
+4. If an item or service is encoded, a corresponding valid value must be encoded for at least one of the following: "Gross Charge", "Discounted Cash Price", "Payer-Specific Negotiated Charge: Dollar Amount", "Payer-Specific Negotiated Charge: Percentage", "Payer-Specific Negotiated Charge: Algorithm".
+5. If there is a "payer specific standard charge" encoded as a dollar amount, there must be a corresponding valid value encoded for the deidentified minimum and deidentified maximum negotiated charge data.
+6. If a "payer specific negotiated charge" can only be expressed as a percentage or algorithm, then a corresponding "Estimated Allowed Amount" must also be encoded.  Required beginning 1/1/2025.  
