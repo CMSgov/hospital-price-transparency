@@ -189,3 +189,4 @@ The following conditional requirements must be met for an MRF to be considered v
 1. If an item or service is encoded, a corresponding valid value must be encoded for at least one of the following: "Gross Charge", "Discounted Cash Price", "Payer-Specific Negotiated Charge: Dollar Amount", "Payer-Specific Negotiated Charge: Percentage", "Payer-Specific Negotiated Charge: Algorithm".
 1. If there is a "payer specific negotiated charge" encoded as a dollar amount, there must be a corresponding valid value encoded for the deidentified minimum and deidentified maximum negotiated charge data.
 1. If a "payer specific negotiated charge" can only be expressed as a percentage or algorithm, then a corresponding "Estimated Allowed Amount" must also be encoded. Required beginning 1/1/2025.  
+1. If code type is NDC, then the corresponding drug unit of measure and drug type of measure data elements must be encoded.  Required beginning 1/1/2025.
