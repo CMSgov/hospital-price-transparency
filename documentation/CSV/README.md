@@ -141,15 +141,19 @@ The value "LOCAL" may be used for internal accounting codes in conjunction with 
 | TriCare Diagnosis Related Groups | TRIS-DRG | 
 
 ## Optional Column Headers
-Two additional data elements: `financial_aid_policy` and `billing_class` are optional headers. They are not required to be included but instructions have been added to support standardization of disclosure of these data elements for hospitals that wish to provide more contextual information about their charges. If `financial_aid_policy` is included in the MRF, we recommend it  be included with the General Data Elements on the first row. If `billing_class` header is included in the MRF, we recommend it be included on the third row.
+`financial_aid_policy`, `general_contract_provisions`, and `billing_class` are optional data elements. They are not required to be included, but instructions have been added to support standardization of disclosure of these data elements for hospitals that wish to provide more contextual information about their charges. If `financial_aid_policy` or `general_contract_provisions` is included in the MRF, we recommend it be included with the General Data Elements on the first row. If `billing_class` header is included in the MRF, we recommend it be included on the third row. 
 
 | Column Header (Tall format) | Column Header (Wide format) | Name                          | Type   | Description                                                                                                                                   | Blanks Accepted |
 |-----------------------------|-----------------------------|-------------------------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 | **financial_aid_policy**    | **financial_aid_policy**    | Hospital Financial Aid Policy | String | The hospital’s financial aid policy. See [additional financial aid policy notes](#additional-notes-on-financial_aid_policy) for more details. | Yes             |
+| **general_contract_provisions**  | **general_contract_provisions**  | General Contract Provisions | String | Payer contract provisions that are negotiated at an aggregate level across items and services (e.g., claim level). | Yes |
 | **billing_class**           | **billing_class**           | Billing Class                 | Enum   | The type of billing for the item/service at the established standard charge. The valid values are "professional", "facility", and "both".     | Yes             |
 
 ### Additional Notes on `financial_aid_policy`
 The hospital’s financial aid policy, also known as charity care or bill forgiveness, that a hospital may choose or be required to apply to a particular individual’s bill. This information may be displayed as either a description or as a link to the financial aid or cash price policy on the hospital’s website.
+
+### Additional Notes on `general_contract_provisions`
+This data element can be used to encode payer contract provisions that are applicable at an aggregate level and may include variable items and services. Examples could be stop-loss provisions or lesser than provisions that apply to the claim (as opposed to each item or service on the claim). Multiple general contract provisions across payer and plan combinations can be included in this data element. If a contract provision applies to a specific item or service, use the Payer-specific Negotiated Charge: Algorithm data element and encode the Estimated Allowed Amount data element.
 
 ## Conditional Requirements
 The following conditional requirements must be met for an MRF to be considered valid. These conditional requirements enforce regulatory rules for required data elements, provide flexibility in the development of MRFs, and ensure corresponding information is encoded for items and services to be understandable by the end user.
