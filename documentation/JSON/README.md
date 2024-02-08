@@ -173,15 +173,27 @@ The `methodology` data element describes the method used by the hospital to esta
 * `other`: If the standard charge methodology used to establish a payer-specific negotiated charge cannot be described by one of the types of standard charge methodology above, select ‘other’ and encode a detailed explanation of the contracting arrangement in the `additional_payer_notes` data attribute.
 
 ## Optional Data Attributes
-Two additional data attributes: `financial_aid_policy` and `billing_class` are optional data attributes. They are not required to be included but instructions have been added to support standardization of disclosure of these data attributes for hospitals that wish to provide more contextual information about their charges. If `financial_aid_policy` is included in the MRF, it is to be included to the [root node](#json-data-attributes). If `billing_class` attribute is included in the MRF, it is to be added to the [standard charge object](#standard-charge-object).
+`financial_aid_policy` , `general_contract_provisions` and `billing_class` are optional data attributes. They are not required to be included but instructions have been added to support standardization of disclosure of these data attributes for hospitals that wish to provide more contextual information about their charges. If `financial_aid_policy` or `general_contract_provisions` are included in the MRF, they are to be included to the [root node](#json-data-attributes). If `billing_class` attribute is included in the MRF, it is to be added to the [standard charge object](#standard-charge-object).
 
 | Attribute                | Name                          | Type   | Description                                                                                                                                   | Required |
 |--------------------------|-------------------------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **financial_aid_policy** | Hospital Financial Aid Policy | String | The hospital’s financial aid policy. See [additional financial aid policy notes](#additional-notes-on-financial_aid_policy) for more details. | No       |
+| **general_contract_provisions** | General Contract Provisions | Array | An array of `general_contract_provisions` objects for specific payer and plans or across all plans.  | No       |
 | **billing_class**        | Billing Class                 | Enum   | The type of billing for the item/service at the established standard charge. The valid values are "professional", "facility", and "both".     | No       |
+
+### General Contract Provisions Object
+
+| Attribute      | Name       | Type   | Description                                                                                                                 | Required |
+| -------------- | ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------- | -------- |
+| **payer_name** | Payer Name | String | The name of the third-party payer associated with the contract provisions.                                                  | No       |
+| **plan_name**  | Plan Name  | String | The name of the payer’s specific plan associated with the contract provisions.                                              | No       |
+| **provisions** | Provisions | String | Description of contract provisions that are negotiated at an aggregate level across items and services (e.g., claim level). | Yes      |
 
 ### Additional Notes on `financial_aid_policy`
 The hospital’s financial aid policy, also known as charity care or bill forgiveness, that a hospital may choose or be required to apply to a particular individual’s bill. This information may be displayed as either a description or as a link to the financial aid or cash price policy on the hospital’s website.
+
+### Additional Notes on `general_contract_provisions`
+This data element can be used to encode payer contract provisions that are applicable at an aggregate level and may include variable items and services. Examples could be "stop loss" provisions or "lesser than" provisions that apply to the claim (as opposed to each item or service on the claim). Multiple general contract provisions across payer and plan combinations can be included in this data element. If a contract provision applies to a specific item or service, use the `standard_charge_algorithm` data element and encode the `estimated_amount` data element.
 
 ## Conditional Requirements
 The following conditional requirements must be met for an MRF to be considered valid. These conditional requirements enforce regulatory rules for required data elements, provide flexibility in the development of MRFs, and ensure corresponding information is encoded for items and services to be understandable by the end user.
