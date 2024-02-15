@@ -194,5 +194,35 @@
         }
       ]
     }
+  ],
+  "modifier_information": [
+    {
+      "description": "Bilateral procedure",
+      "code": "50",
+      "modifier_payer_information": [
+        {
+          "payer_name": "Platform Health Insurance",
+          "plan_name": "PPO",
+          "description": "150% payment adjustment for the item or service to which the modifier is appended"
+        },
+        {
+          "payer_name": "Region Health Insurance",
+          "plan_name": "HMO",
+          "description": "145% payment adjustment for the item or service to which the modifier is appended"
+        }
+      ]
+    }
+  ],
+  "general_contract_provisions": [
+    {
+      "payer_name": "UHC",
+      "plan_name": "some plan",
+      "provision": "here is a provision"
+    },
+    {
+      "payer_name": "UHC",
+      "plan_name": "some plan 2",
+      "provision": "here is another provision"
+    }
   ]
 }
