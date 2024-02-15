@@ -215,14 +215,14 @@
   ],
   "general_contract_provisions": [
     {
-      "payer_name": "UHC",
-      "plan_name": "some plan",
-      "provision": "here is a provision"
+      "payer_name": "Platform Health Insurance",
+      "plan_name": "PPO",
+      "provision": "When total claim charges exceed $200,000.00 for a Platform Health Insurance plan, the entire claim will be reimbursed at 50% of charges. This amount will supersede any other contracted rate that would otherwise apply."
     },
     {
-      "payer_name": "UHC",
-      "plan_name": "some plan 2",
-      "provision": "here is another provision"
+      "payer_name": "Region Health Insurance",
+      "plan_name": "HMO",
+      "provision": "When total claim charges exceed $250,000.00 for a Region Health Insurance plan, the entire claim will be reimbursed at 45% of charges. This amount will supersede any other contracted rate that would otherwise apply."
     }
   ]
 }
