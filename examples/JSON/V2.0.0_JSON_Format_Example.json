@@ -194,5 +194,35 @@
         }
       ]
     }
+  ],
+  "modifier_information": [
+    {
+      "description": "Bilateral procedure",
+      "code": "50",
+      "modifier_payer_information": [
+        {
+          "payer_name": "Platform Health Insurance",
+          "plan_name": "PPO",
+          "description": "150% payment adjustment for the item or service to which the modifier is appended"
+        },
+        {
+          "payer_name": "Region Health Insurance",
+          "plan_name": "HMO",
+          "description": "145% payment adjustment for the item or service to which the modifier is appended"
+        }
+      ]
+    }
+  ],
+  "general_contract_provisions": [
+    {
+      "payer_name": "Platform Health Insurance",
+      "plan_name": "PPO",
+      "provision": "When total claim charges exceed $200,000.00 for a Platform Health Insurance plan, the entire claim will be reimbursed at 50% of charges. This amount will supersede any other contracted rate that would otherwise apply."
+    },
+    {
+      "payer_name": "Region Health Insurance",
+      "plan_name": "HMO",
+      "provision": "When total claim charges exceed $250,000.00 for a Region Health Insurance plan, the entire claim will be reimbursed at 45% of charges. This amount will supersede any other contracted rate that would otherwise apply."
+    }
   ]
 }
