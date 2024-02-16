@@ -12,12 +12,13 @@ For CSV, hospitals may choose either a “wide” or “tall” layout. The CSV 
   * All "Numeric" data elements must be positive numbers. Entering a negative number or "0" will generate a deficiency. 
 * While [GitHub examples](../../examples/CSV) exclude leading and trailing spaces in headers, valid values, and around pipes, inadvertently inserting spaces will not generate a deficiency. Similarly, while [GitHub examples](../../examples/CSV) may use capital and lower-case letters, valid values are case-insensitive and changes in capital vs lower-case letters will not generate a deficiency.
 * Hospitals are permitted to include additional optional information through optional data elements that are defined in the data dictionary (e.g., billing class and hospital financial aid policy) or hospital created data elements. Follow the technical instructions for including the defined optional data elements.
-* Ensure all [conditional requirements](#conditional-requirements) are met for an MRF to be considered valid
+* Ensure all [conditional requirements](#conditional-requirements) are met for an MRF to be considered valid.
+* Do not repeat column headers in row 1 and 3. Ensure each header is unique.
 
 Encode the headers and valid values according to the data element implementation timeline in the HPT regulation ([45 CFR § 180.50](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50)) as finalized in the [CY2024 OPPS/ASC](https://www.federalregister.gov/documents/2023/11/22/2023-24293/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment) final rule.
 
 ## General Data Elements
-These required general data about the MRF must be stated once at the top of the file (i.e. the first row).
+These required general data elements about the MRF must be stated once at the top of the file (i.e. the first row).
 
 | Column Header (Tall format)                                          | Column Header (Wide format)                                          | Name                           | Type    | Description                                                                                                                                                                                                                                          | Blanks Accepted |
 |----------------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
@@ -38,7 +39,7 @@ The affirmation data element for CSV will require the following text in the colu
 
 The value to be encoded by the hospital will either be "true" or "false". Please see the column header in the CSV template [here](templates/V2.0.0_Tall_CSV_Format_Template.csv)
 
-### Required Standard Charge, Item/Service, and Coding Data Elements
+## Required Standard Charge, Item/Service, and Coding Data Elements
 After the general data elements have been disclosed, the disclosure of required standard charges, item/service, and coding data elements  will begin on row 3.
 
 If a `--` is encountered in the following table, then the instruction does not apply to the specific CMS template selected. You can view both [CSV templates here](https://github.com/CMSgov/hospital-price-transparency/tree/master/documentation/CSV/templates).
