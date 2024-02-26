@@ -402,7 +402,8 @@
           "methodology": {
             "const": "other"
           }
-        }
+        },
+        "required": ["methodology"]
       },
       "then": {
         "required": [
