@@ -301,6 +301,14 @@
         "description": {
           "type": "string",
           "minLength": 1
+        },
+        "setting": {
+          "enum": [
+            "inpatient",
+            "outpatient",
+            "both"
+          ],
+          "type": "string"
         }
       },
       "required": [
