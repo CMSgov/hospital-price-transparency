@@ -100,6 +100,7 @@ An [example](../../examples/JSON/V2.0.0_JSON_Format_Example.json) of this would 
 | **payer_name**  | Payer Name  | String | The name of the third-party payer that is, by statute, contract, or agreement, legally responsible for payment of a claim for a healthcare item or service.                     | Yes      |
 | **plan_name**   | Plan Name   | String | The name of the payer’s specific plan associated with the standard charge.                                                                                                      | Yes      |
 | **description** | Description | String | Description of how the modifier(s) may change the standard charge that corresponds to hospital item or services (e.g., modifier applies 150% change to standard charge amount). | Yes      |
+| **setting**     | Setting     | Enum   | The place where the item or service is provided for the associated standard charge amount. Valid values: "inpatient", "outpatient", "both".                                     | No       |
 
 ## Payers Information Object
 
