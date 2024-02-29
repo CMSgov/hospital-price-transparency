@@ -166,3 +166,4 @@ The following conditional requirements must be met for an MRF to be considered v
 6. If a "payer specific negotiated charge" can only be expressed as a percentage or algorithm, then a corresponding "Estimated Allowed Amount" must also be encoded.  Required beginning 1/1/2025.
 7. If code type is NDC, then the corresponding drug unit of measure and drug type of measure data element must be encoded.  Required beginning 1/1/2025.
 8. If a modifier is encoded without an item or service, then a `description` and one of the following is the minimum information required: `additional_payer_notes`, `standard_charge | negotiated_dollar`, `standard_charge | negotiated_percentage`, or `standard_charge | negotiated_algorithm`.
+9. If a value is encoded in the `drug_unit_of_measurement`, a value must also be encoded in the `drug_type_of_measurement`. Conversely, if a value is encoded in the `drug_type_of_measurement`, a value must be encoded in the `drug_unit_of_measurement`.
