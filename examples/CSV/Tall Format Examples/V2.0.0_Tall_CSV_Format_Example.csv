@@ -11,8 +11,8 @@ Major hip and knee joint replacement or reattachment of lower extremity without 
 "Behavioral health; residential (hospital residential treatment program), without room and board, per diem, days 1-3",H0017,HCPCS,,,,inpatient,,,2500,2250,Region Health Insurance,HMO,2000,,,,per diem,2000,2000,
 "Behavioral health; residential (hospital residential treatment program), without room and board, per diem, days 4-5",H0017,HCPCS,,,,inpatient,,,2500,2250,Region Health Insurance,HMO,1800,,,,per diem,1800,1800,
 "Behavioral health; residential (hospital residential treatment program), without room and board, per diem, days 6+",H0017,HCPCS,,,,inpatient,,,2500,2250,Region Health Insurance,HMO,1200,,,,per diem,1200,1200,
-Treatment or observation room ? observation room,762,RC,,,,outpatient,,,13000,12000,Platform Health Insurance,PPO,8000,,,,case rate,8000,10000,Negotiated standard charge without surgery and without rule out myocardial infarction. 
-Treatment or observation room ? observation room,762,RC,,,,outpatient,,,13000,12000,Platform Health Insurance,PPO,10000,,,,case rate,8000,10000,Negotiated standard charge without surgery and with rule out myocardial infarction. 
-Treatment or observation room ? observation room,762,RC,,,,outpatient,,,13000,12000,Region Health Insurance,HMO,9000,,,,case rate,8000,10000,
+Treatment or observation room - observation room,762,RC,,,,outpatient,,,13000,12000,Platform Health Insurance,PPO,8000,,,,case rate,8000,10000,Negotiated standard charge without surgery and without rule out myocardial infarction.
+Treatment or observation room - observation room,762,RC,,,,outpatient,,,13000,12000,Platform Health Insurance,PPO,10000,,,,case rate,8000,10000,Negotiated standard charge without surgery and with rule out myocardial infarction.
+Treatment or observation room - observation room,762,RC,,,,outpatient,,,13000,12000,Region Health Insurance,HMO,9000,,,,case rate,8000,10000,
 Bilateral procedure,,,,,50,both,,,,,Platform Health Insurance,PPO,,150,,,,,,150% payment adjustment for the item or service to which the modifier is appended.
 Bilateral procedure,,,,,50,both,,,,,Region Health Insurance,HMO,,145,,,,,,145% payment adjustment for the item or service to which the modifier is appended.
