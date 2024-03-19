@@ -16,3 +16,15 @@ Treatment or observation room - observation room,762,RC,,,,outpatient,,,13000,12
 Treatment or observation room - observation room,762,RC,,,,outpatient,,,13000,12000,Region Health Insurance,HMO,9000,,,,case rate,8000,10000,
 Bilateral procedure,,,,,50,both,,,,,Platform Health Insurance,PPO,,150,,,,,,150% payment adjustment for the item or service to which the modifier is appended.
 Bilateral procedure,,,,,50,both,,,,,Region Health Insurance,HMO,,145,,,,,,145% payment adjustment for the item or service to which the modifier is appended.
+Aspirin 81 milligram chewable tablet,10135-0729-62,NDC,,,,both,1,UN,2,1.5,Platform Health Insurance,PPO,0.75,,,,fee schedule,0.75,0.95,
+Aspirin 81 milligram chewable tablet,10135-0729-62,NDC,,,,both,1,UN,2,1.5,Region Health Insurance,HMO,0.95,,,,fee schedule,0.75,0.95,
+Mexiletine hydrochloride 150 milligram capsule,0093-8739-01,NDC,,,,both,1,UN,5,4,Platform Health Insurance,PPO,3,,,,fee schedule,3,3,
+"Mexiletine hydrochloride 150 milligram capsules, 100 capsules per bottle, 1 bottle",0093-8739-01,NDC,,,,both,1,EA,500,400,Region Health Insurance,HMO,350,,,,fee schedule,350,350,
+Fluconazole 2 milligrams/milliliter,J1450,HCPCS,25021-0184-82,NDC,,both,100,ML,75,45,Platform Health Insurance,PPO,35,,,,fee schedule,35,37,
+Fluconazole 2 milligrams/milliliter,J1450,HCPCS,25021-0184-82,NDC,,both,100,ML,75,45,Region Health Insurance,HMO,37,,,,fee schedule,35,37,
+"Kit for preparation of tc-99m tetrosfomin injection, 100 millicurie",17156-0026-30,NDC,,,,both,1,EA,515,450,Platform Health Insurance,PPO,265,,,,fee schedule,265,355,
+"Kit for preparation of tc-99m tetrosfomin injection, 100 millicurie",17156-0026-30,NDC,,,,both,1,EA,515,450,Region Health Insurance,HMO,355,,,,fee schedule,265,355,
+Permethrin 5% cream,45802-0269-37,NDC,,,,both,60,GM,120,75,Platform Health Insurance,PPO,70,,,,fee schedule,65,70,
+Permethrin 5% cream,45802-0269-37,NDC,,,,both,60,GM,120,75,Region Health Insurance,HMO,65,,,,fee schedule,65,70,
+Cyanocobalamin 1000 micrograms/milliliter injection solution,J3420,HCPCS,63323-0044-01,NDC,,both,1,ML,30,25,Platform Health Insurance,PPO,8,,,,fee schedule,8,15,
+Cyanocobalamin 1000 micrograms/milliliter injection solution,J3420,HCPCS,63323-0044-01,NDC,,both,1,ML,30,25,Region Health Insurance,HMO,15,,,,fee schedule,8,15,
