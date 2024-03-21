@@ -24,7 +24,7 @@ Users should review the final rule(s) in their entirety as well as review any cl
 
 * [Github Issues](https://guides.github.com/features/issues/) - Where people discuss issues related to the project.
 * [Github Discussions](https://github.com/CMSgov/hospital-price-transparency/discussions) - Use these channels for conversational topics (for example, "How do I&hellip;" or "What do you think about&hellip;" instead of bug reports or feature requests).
-* [Hospital Price Transparency Tools](https://cmsgov.github.io/hpt-tool/txt-generator/) - Link to webpage of tools to support hospitals in meeting the accessibility and MRF requirements including a MRF File Naming Wizard, a TXT File Generator, and a Validator V2.0 coming in Spring 2024 that tests against the required CMS template and data specifications.
+* [Hospital Price Transparency Tools](https://cmsgov.github.io/hpt-tool/txt-generator/) - Link to webpage of tools to support hospitals in meeting the accessibility and MRF requirements including a MRF File Naming Wizard, a TXT File Generator, and a Validator V2.0 that tests against the required CMS template and data specifications.
 
 Before posting a comment, issue, or question, please search through existing discussions and issues. There is a good chance that the topic in questions is already being discussed.
 
