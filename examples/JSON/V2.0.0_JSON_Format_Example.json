@@ -193,6 +193,254 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Aspirin 81 milligram chewable tablet",
+      "drug_information": {
+        "unit": "1",
+        "type": "UN"
+      },
+      "code_information": [
+        {
+          "code": "10135-0729-62",
+          "type": "NDC"
+        }
+      ],
+      "standard_charges": [
+        {
+          "gross_charge": 2,
+          "discounted_cash": 1.5,
+          "minimum": 0.75,
+          "maximum": 0.95,
+          "setting": "both",
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "standard_charge_dollar": 0.75,
+              "methodology": "fee schedule"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "standard_charge_dollar": 0.95,
+              "methodology": "fee schedule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Mexiletine hydrochloride 150 milligram capsule",
+      "drug_information": {
+        "unit": "1",
+        "type": "UN"
+      },
+      "code_information": [
+        {
+          "code": "0093-8739-01",
+          "type": "NDC"
+        }
+      ],
+      "standard_charges": [
+        {
+          "gross_charge": 5,
+          "discounted_cash": 4,
+          "minimum": 3,
+          "maximum": 3,
+          "setting": "both",
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "standard_charge_dollar": 3,
+              "methodology": "fee schedule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Mexiletine hydrochloride 150 milligram capsules, 100 capsules per bottle, 1 bottle",
+      "drug_information": {
+        "unit": "1",
+        "type": "EA"
+      },
+      "code_information": [
+        {
+          "code": "0093-8739-01",
+          "type": "NDC"
+        }
+      ],
+      "standard_charges": [
+        {
+          "gross_charge": 500,
+          "discounted_cash": 400,
+          "minimum": 350,
+          "maximum": 350,
+          "setting": "both",
+          "payers_information": [
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "standard_charge_dollar": 350,
+              "methodology": "fee schedule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Fluconazole 2 milligrams/milliliter",
+      "drug_information": {
+        "unit": "100",
+        "type": "ML"
+      },
+      "code_information": [
+        {
+          "code": "J1450",
+          "type": "HCPCS"
+        },
+        {
+          "code": "25021-0184-82",
+          "type": "NDC"
+        }
+      ],
+      "standard_charges": [
+        {
+          "gross_charge": 75,
+          "discounted_cash": 45,
+          "minimum": 35,
+          "maximum": 37,
+          "setting": "both",
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "standard_charge_dollar": 35,
+              "methodology": "fee schedule"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "standard_charge_dollar": 37,
+              "methodology": "fee schedule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Kit for preparation of tc-99m tetrosfomin injection, 100 millicurie",
+      "drug_information": {
+        "unit": "1",
+        "type": "EA"
+      },
+      "code_information": [
+        {
+          "code": "17156-0026-30",
+          "type": "NDC"
+        }
+      ],
+      "standard_charges": [
+        {
+          "gross_charge": 515,
+          "discounted_cash": 450,
+          "minimum": 265,
+          "maximum": 355,
+          "setting": "both",
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "standard_charge_dollar": 265,
+              "methodology": "fee schedule"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "standard_charge_dollar": 355,
+              "methodology": "fee schedule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Permethrin 5% cream",
+      "drug_information": {
+        "unit": "60",
+        "type": "GM"
+      },
+      "code_information": [
+        {
+          "code": "45802-0269-37",
+          "type": "NDC"
+        }
+      ],
+      "standard_charges": [
+        {
+          "gross_charge": 120,
+          "discounted_cash": 75,
+          "minimum": 65,
+          "maximum": 70,
+          "setting": "both",
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "standard_charge_dollar": 70,
+              "methodology": "fee schedule"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "standard_charge_dollar": 65,
+              "methodology": "fee schedule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Cyanocobalamin 1000 micrograms/milliliter injection solution",
+      "drug_information": {
+        "unit": "1",
+        "type": "ML"
+      },
+      "code_information": [
+        {
+          "code": "J3420",
+          "type": "HCPCS"
+        },
+        {
+          "code": "63323-0044-01",
+          "type": "NDC"
+        }
+      ],
+      "standard_charges": [
+        {
+          "gross_charge": 30,
+          "discounted_cash": 25,
+          "minimum": 8,
+          "maximum": 15,
+          "setting": "both",
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "standard_charge_dollar": 8,
+              "methodology": "fee schedule"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "standard_charge_dollar": 15,
+              "methodology": "fee schedule"
+            }
+          ]
+        }
+      ]
     }
   ],
   "modifier_information": [
