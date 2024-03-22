@@ -307,19 +307,7 @@
         "payer_name",
         "plan_name",
         "description"
-      ],
-      "if": {
-        "properties": {
-          "methodology": {
-            "const": "other"
-          }
-        }
-      },
-      "then": {
-        "required": [
-          "additional_payer_notes"
-        ]
-      }
+      ]
     },
     "standard_charge_information": {
       "type": "object",
