@@ -198,15 +198,11 @@
       "anyOf": [
         {
           "type": "object",
-          "required": [
-            "gross_charge"
-          ]
+          "required": ["gross_charge"]
         },
         {
           "type": "object",
-          "required": [
-            "discounted_cash"
-          ]
+          "required": ["discounted_cash"]
         },
         {
           "type": "object",
@@ -217,26 +213,21 @@
                 "anyOf": [
                   {
                     "type": "object",
-                    "required": [
-                      "standard_charge_dollar"
-                    ]
+                    "required": ["standard_charge_dollar"]
                   },
                   {
                     "type": "object",
-                    "required": [
-                      "standard_charge_algorithm"
-                    ]
+                    "required": ["standard_charge_algorithm"]
                   },
                   {
                     "type": "object",
-                    "required": [
-                      "standard_charge_percentage"
-                    ]
+                    "required": ["standard_charge_percentage"]
                   }
                 ]
               }
             }
-          }
+          },
+          "required": ["payers_information"]
         }
       ],
       "if": {
@@ -244,22 +235,16 @@
         "properties": {
           "payers_information": {
             "type": "array",
-            "items": {
+            "contains": {
               "type": "object",
-              "not": {
-                "required": [
-                  "standard_charge_dollar"
-                ]
-              }
+              "required": ["standard_charge_dollar"]
             }
           }
-        }
+        },
+        "required": ["payers_information"]
       },
-      "else": {
-        "required": [
-          "minimum",
-          "maximum"
-        ]
+      "then": {
+        "required": ["minimum", "maximum"]
       }
     },
     "modifier_information": {
