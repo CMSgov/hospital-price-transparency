@@ -315,9 +315,13 @@
         "required": ["methodology"]
       },
       "then": {
-        "required": [
-          "additional_payer_notes"
-        ]
+        "properties": {
+          "additional_payer_notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": ["additional_payer_notes"]
       }
     }
   },
