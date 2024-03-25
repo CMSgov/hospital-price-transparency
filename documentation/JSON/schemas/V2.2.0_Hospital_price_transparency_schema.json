@@ -338,7 +338,26 @@
         "description",
         "code_information",
         "standard_charges"
-      ]
+      ],
+      "if": {
+        "type": "object",
+        "properties": {
+          "code_information": {
+            "type": "array",
+            "contains": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "NDC"
+                }
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "required": ["drug_information"]
+      }
     },
     "payers_information": {
       "type": "object",
