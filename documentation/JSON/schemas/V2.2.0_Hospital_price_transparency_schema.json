@@ -404,19 +404,40 @@
         "plan_name",
         "methodology"
       ],
-      "if": {
-        "properties": {
-          "methodology": {
-            "const": "other"
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "methodology": {
+                "const": "other"
+              }
+            },
+            "required": ["methodology"]
+          },
+          "then": {
+            "properties": {
+              "additional_payer_notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": ["additional_payer_notes"]
           }
-        },
-        "required": ["methodology"]
-      },
-      "then": {
-        "required": [
-          "additional_payer_notes"
-        ]
-      }
+        },{
+          "if": {
+            "anyOf": [
+              { "required": ["standard_charge_percentage"] },
+              { "required": ["standard_charge_algorithm"] }
+            ],
+            "not": {
+              "required": ["standard_charge_dollar"]
+            }
+          },
+          "then": {
+            "required": ["estimated_amount"]
+          }
+        }
+      ]
     }
   },
   "type": "object",
