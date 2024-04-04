@@ -211,7 +211,10 @@
                 ]
               }
             }
-          }
+          },
+          "required": [
+            "payers_information"
+          ]
         }
       ],
       "if": {
@@ -219,18 +222,19 @@
         "properties": {
           "payers_information": {
             "type": "array",
-            "items": {
+            "contains": {
               "type": "object",
-              "not": {
-                "required": [
-                  "standard_charge_dollar"
-                ]
-              }
+              "required": [
+                "standard_charge_dollar"
+              ]
             }
           }
-        }
+        },
+        "required": [
+          "payers_information"
+        ]
       },
-      "else": {
+      "then": {
         "required": [
           "minimum",
           "maximum"
@@ -312,7 +316,9 @@
             "const": "other"
           }
         },
-        "required": ["methodology"]
+        "required": [
+          "methodology"
+        ]
       },
       "then": {
         "properties": {
@@ -321,7 +327,9 @@
             "minLength": 1
           }
         },
-        "required": ["additional_payer_notes"]
+        "required": [
+          "additional_payer_notes"
+        ]
       }
     }
   },
@@ -365,7 +373,7 @@
         "$ref": "#/definitions/standard_charge_information"
       },
       "minItems": 1
-    },
+    }
   },
   "required": [
     "hospital_name",
