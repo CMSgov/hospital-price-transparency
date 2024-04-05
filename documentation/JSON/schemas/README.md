@@ -9,11 +9,3 @@ This version of the JSON schema includes data dictionary technical specification
 
 #### [V2.2.0](./V2.2.0_Hospital_price_transparency_schema.json) – January 1, 2025 Implementation date *New – 3/28/2024* ​
 This version of the JSON schema includes all data dictionary technical specifications related to data elements, value encoding, and conditional checks that are required for implementation beginning 7/1/2024 and 1/1/2025. Users of this schema will not have to perform any additional manual changes to their file to meet all data dictionary technical specifications that become effective beginning 7/1/2024 and 1/1/2025. Users should check for errors using the validator tool found here: https://cmsgov.github.io/hpt-tool/
-
-### JSON 2.0 Version differences
-
-| Version/Data dictionary requirements | Data elements and value encoding specifications effective 7/1/2024 | Conditional checks effective 7/1/2024 | Data elements and value encoding specifications effective 1/1/2025 | Conditional checks effective 1/1/2025 | 
-| ------------- | --------------- |  --------------- |  --------------- |  --------------- | 
-| 2.0.0 | Includes | X | Includes | X |
-| 2.1.0 | Includes | Includes | X | X |
-| 2.2.0 | Includes | Includes | Includes | Includes |
