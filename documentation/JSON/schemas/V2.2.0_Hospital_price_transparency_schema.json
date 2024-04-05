@@ -283,15 +283,7 @@
             "$ref": "#/definitions/modifier_payer_information"
           },
           "minItems": 1
-        },
-        "setting": {
-          "enum": [
-            "inpatient",
-            "outpatient",
-            "both"
-          ],
-          "type": "string"
-        },
+        }
       },
       "required": [
         "description",
