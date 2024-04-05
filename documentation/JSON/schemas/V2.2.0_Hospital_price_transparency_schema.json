@@ -198,11 +198,15 @@
       "anyOf": [
         {
           "type": "object",
-          "required": ["gross_charge"]
+          "required": [
+            "gross_charge"
+          ]
         },
         {
           "type": "object",
-          "required": ["discounted_cash"]
+          "required": [
+            "discounted_cash"
+          ]
         },
         {
           "type": "object",
@@ -213,21 +217,29 @@
                 "anyOf": [
                   {
                     "type": "object",
-                    "required": ["standard_charge_dollar"]
+                    "required": [
+                      "standard_charge_dollar"
+                    ]
                   },
                   {
                     "type": "object",
-                    "required": ["standard_charge_algorithm"]
+                    "required": [
+                      "standard_charge_algorithm"
+                    ]
                   },
                   {
                     "type": "object",
-                    "required": ["standard_charge_percentage"]
+                    "required": [
+                      "standard_charge_percentage"
+                    ]
                   }
                 ]
               }
             }
           },
-          "required": ["payers_information"]
+          "required": [
+            "payers_information"
+          ]
         }
       ],
       "if": {
@@ -237,14 +249,21 @@
             "type": "array",
             "contains": {
               "type": "object",
-              "required": ["standard_charge_dollar"]
+              "required": [
+                "standard_charge_dollar"
+              ]
             }
           }
         },
-        "required": ["payers_information"]
+        "required": [
+          "payers_information"
+        ]
       },
       "then": {
-        "required": ["minimum", "maximum"]
+        "required": [
+          "minimum",
+          "maximum"
+        ]
       }
     },
     "modifier_information": {
@@ -264,7 +283,15 @@
             "$ref": "#/definitions/modifier_payer_information"
           },
           "minItems": 1
-        }
+        },
+        "setting": {
+          "enum": [
+            "inpatient",
+            "outpatient",
+            "both"
+          ],
+          "type": "string"
+        },
       },
       "required": [
         "description",
@@ -341,7 +368,9 @@
         }
       },
       "then": {
-        "required": ["drug_information"]
+        "required": [
+          "drug_information"
+        ]
       }
     },
     "payers_information": {
@@ -397,7 +426,9 @@
                 "const": "other"
               }
             },
-            "required": ["methodology"]
+            "required": [
+              "methodology"
+            ]
           },
           "then": {
             "properties": {
@@ -406,20 +437,35 @@
                 "minLength": 1
               }
             },
-            "required": ["additional_payer_notes"]
+            "required": [
+              "additional_payer_notes"
+            ]
           }
-        },{
+        },
+        {
           "if": {
             "anyOf": [
-              { "required": ["standard_charge_percentage"] },
-              { "required": ["standard_charge_algorithm"] }
+              {
+                "required": [
+                  "standard_charge_percentage"
+                ]
+              },
+              {
+                "required": [
+                  "standard_charge_algorithm"
+                ]
+              }
             ],
             "not": {
-              "required": ["standard_charge_dollar"]
+              "required": [
+                "standard_charge_dollar"
+              ]
             }
           },
           "then": {
-            "required": ["estimated_amount"]
+            "required": [
+              "estimated_amount"
+            ]
           }
         }
       ]
