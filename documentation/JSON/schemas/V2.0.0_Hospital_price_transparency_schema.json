@@ -48,9 +48,9 @@
                     "type": "boolean"
                 }
             },
-            "required":[
-              "affirmation",
-              "confirm_affirmation"
+            "required": [
+                "affirmation",
+                "confirm_affirmation"
             ]
         },
         "license_information": {
@@ -62,7 +62,65 @@
                 },
                 "state": {
                     "enum": [
-                        "AL", "AK", "AS", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FM", "FL", "GA", "GU", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MH", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "MP", "OH", "OK", "OR", "PW", "PA", "PR", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VI", "VA", "WA", "WV", "WI", "WY"
+                        "AL",
+                        "AK",
+                        "AS",
+                        "AZ",
+                        "AR",
+                        "CA",
+                        "CO",
+                        "CT",
+                        "DE",
+                        "DC",
+                        "FM",
+                        "FL",
+                        "GA",
+                        "GU",
+                        "HI",
+                        "ID",
+                        "IL",
+                        "IN",
+                        "IA",
+                        "KS",
+                        "KY",
+                        "LA",
+                        "ME",
+                        "MH",
+                        "MD",
+                        "MA",
+                        "MI",
+                        "MN",
+                        "MS",
+                        "MO",
+                        "MT",
+                        "NE",
+                        "NV",
+                        "NH",
+                        "NJ",
+                        "NM",
+                        "NY",
+                        "NC",
+                        "ND",
+                        "MP",
+                        "OH",
+                        "OK",
+                        "OR",
+                        "PW",
+                        "PA",
+                        "PR",
+                        "RI",
+                        "SC",
+                        "SD",
+                        "TN",
+                        "TX",
+                        "UT",
+                        "VT",
+                        "VI",
+                        "VA",
+                        "WA",
+                        "WV",
+                        "WI",
+                        "WY"
                     ],
                     "type": "string"
                 }
@@ -71,7 +129,6 @@
                 "state"
             ]
         },
-
         "standard_charges": {
             "type": "object",
             "properties": {
@@ -142,7 +199,6 @@
                 "standard_charges"
             ]
         },
-
         "payers_information": {
             "type": "object",
             "properties": {
@@ -171,7 +227,7 @@
                 "estimated_amount": {
                     "type": "number",
                     "exclusiveMinimum": 0
-                },                  
+                },
                 "methodology": {
                     "enum": [
                         "case rate",
@@ -188,7 +244,7 @@
                 "plan_name",
                 "methodology"
             ]
-          }
+        }
     },
     "type": "object",
     "properties": {
