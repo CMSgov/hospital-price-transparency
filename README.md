@@ -5,10 +5,10 @@ This technical implementation guide contains data dictionaries, CSV templates, a
 
 If you are looking for the technical implementation guide for the machine readable files required by the [Transparency in Coverage](https://www.cms.gov/priorities/key-initiatives/healthplan-price-transparency) final rules (85 FR 72158), please go to https://github.com/CMSgov/price-transparency-guide.
 
-<p style="display:flex">
-  <a style="flex:1; margin-right:40px" href="https://github.com/CMSgov/hospital-price-transparency/tree/https://github.com/CMSgov/hospital-price-transparency/tree/master/documentation/CSVmaster/documentation/CSV"><img src="resources/images/csv_mrf.png" /></a>
-  <a style="flex:1; margin-right:40px" href="https://github.com/CMSgov/hospital-price-transparency/tree/master/documentation/JSON"><img src="resources/images/json_mrf.png" /> </a>
-  <a style="flex:1; margin-right:40px" href="https://github.com/CMSgov/hospital-price-transparency/tree/master/documentation/CSV"><img src="resources/images/github_new.png" /></a>
+<p>
+  <a href="https://github.com/CMSgov/hospital-price-transparency/tree/https://github.com/CMSgov/hospital-price-transparency/tree/master/documentation/CSVmaster/documentation/CSV"><img src="resources/images/csv_mrf.png" width="150px"/></a>
+  <a href="https://github.com/CMSgov/hospital-price-transparency/tree/master/documentation/JSON"><img src="resources/images/json_mrf.png" width="150px"/> </a>
+  <a href="https://github.com/CMSgov/hospital-price-transparency/tree/master/documentation/CSV"><img src="resources/images/github_new.png" width="150px"/></a>
 </p>
 
 Overview
