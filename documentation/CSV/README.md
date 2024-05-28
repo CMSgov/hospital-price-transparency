@@ -1,6 +1,5 @@
-# Hospital Machine-Readable File Data Dictionary
-The following is documentation for those who wish to build a CSV file to satisfy [45 CFR 180.50](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50) requirements. This documentation has information in how to disclose data elements for both the ["Tall"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0_Tall_CSV_Format_Template.csv) and
-["Wide"](https://github.com/CMSgov/hospital-price-transparency/blob/master/documentation/CSV/templates/V2.0.0_Wide_CSV_Format_Template.csv) CSV format. 
+# Hospital Price Transparency CSV Data Dictionary
+Review this entire data dictionary for how to disclose data elements in CSV and find the [CSV "Tall" template here](./templates/V2.0.0_Tall_CSV_Format_Template.csv) and [CSV "Wide" template here](./templates/V2.0.0_Wide_CSV_Format_Template.csv) to begin building your hospital MRF.
 
 ## General CSV Instructions
 Developers of machine-readable files (MRFs) should generally consider and adopt established standards and industry norms for CSV files when creating the MRF.  For more information on CSV standards visit https://www.rfc-editor.org/rfc/rfc4180. 
