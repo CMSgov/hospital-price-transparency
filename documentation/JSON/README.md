@@ -1,5 +1,5 @@
-# Hospital Machine-Readable JSON Schema
-The following is documentation for those who wish to build a JSON file to satisfy [45 CFR 180.50](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50) requirements. This documentation has information in how to disclose data elements for the [JSON schema](./schemas/).
+# Hospital Price Transparency JSON Data Dictionary
+Review this entire data dictionary for how to disclose data elements in JSON and find the [JSON schemas here](./schemas/) to begin building your hospital MRF.
 
 ## General JSON Instructions
 Developers of MRFs should generally consider and adopt established standards and industry norms for JSON files when creating the MRF. For more information on the JSON schema standards visit https://www.json.org/json-en.html, https://json-schema.org/. Additional details and instructions specific to JSON may be found in the [JSON schema](./schemas/). Below are additional reminders to avoid common errors in MRFs:
