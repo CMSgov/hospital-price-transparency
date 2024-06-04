@@ -1,5 +1,5 @@
 # Hospital Price Transparency JSON Data Dictionary
-Review this entire data dictionary for how to disclose data elements in JSON and find the [JSON schemas here](./schemas/) to begin building your hospital MRF.
+Review this entire data dictionary for how to disclose data elements in JSON and find the [JSON schemas here](./schemas/) to begin building your hospital MRF. For an explanation of how to interpret the data element tables, review the [How to Read the Data Dictionary Tables](../HOW_TO_READ_DATA_DICTIONARY.md) information.
 
 ## General JSON Instructions
 Developers of MRFs should generally consider and adopt established standards and industry norms for JSON files when creating the MRF. For more information on the JSON schema standards visit https://www.json.org/json-en.html, https://json-schema.org/. Additional details and instructions specific to JSON may be found in the [JSON schema](./schemas/). Below are additional reminders to avoid common errors in MRFs:
@@ -77,7 +77,7 @@ An [example](../../examples/JSON/V2.0.0_JSON_Format_Example.json) of this would 
 
 | Attribute                    | Name                     | Type    | Description                                                                                                                                                                      | Required |
 |------------------------------|--------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| **minimum**                  | Minimum                  | Numeric | De-identified maximum negotiated charge is the highest charge that a hospital has negotiated with all third-party payers for an item or service. This is determined from the set of negotiated standard charge dollar amounts.  | No       |
+| **minimum**                  | Minimum                  | Numeric | De-identified minimum negotiated charge is the highest charge that a hospital has negotiated with all third-party payers for an item or service. This is determined from the set of negotiated standard charge dollar amounts.  | No       |
 | **maximum**                  | Maximum                  | Numeric | De-identified maximum negotiated charge is the highest charge that a hospital has negotiated with all third-party payers for an item or service. This is determined from the set of negotiated standard charge dollar amounts.  | No       |
 | **gross_charge**             | Gross Charge             | Numeric | Gross charge is the charge for an individual item or service that is reflected on a hospital’s chargemaster, absent any discounts.                                               | No       |
 | **discounted_cash**          | Discounted Cash          | Numeric | Discounted cash price is defined as the charge that applies to an individual who pays cash (or cash equivalent) for a hospital item or service.                                  | No       |
@@ -116,7 +116,7 @@ An [example](../../examples/JSON/V2.0.0_JSON_Format_Example.json) of this would 
 
 ### Additional Notes for percentage
 
-This data element should be encoded only when the payer-specific negotiated charge has been established as a percentage and no dollar amount can be calculated. This data element will contain the numeric representation of the percentage not as a decimal (70.5% is to be entered as “70.5” and not “.705”). If you encode information for this data element, you must also calculate and display the estimated allowed amount for that item or service as a separate data element.
+Information for this data element should be encoded only when the payer-specific negotiated charge has been established as a percentage and no standard dollar amount can be calculated. This data element will contain the numeric representation of the percentage not as a decimal (70.5% is to be entered as “70.5” and not “.705”). If you encode information for this data element, you must also calculate and encode a corresponding estimated allowed amount for that item or service.
 
 ### Additional Notes for `estimated_amount`
 CMS recommends that the hospital encode 999999999 (nine 9s) in the data element value to indicate that there is not sufficient historic claims history to derive the estimated allowed amount, and then update the file when sufficient history is available. As a guide for the threshold for sufficient history, we suggest hospitals use [the CMS Cell Suppression Policy](https://www.hhs.gov/guidance/document/cms-cell-suppression-policy) established in January, 2020. Additionally if the hospital wishes to provide further context for the lack of data they can do so in the appropriate additional notes field.
