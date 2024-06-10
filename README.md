@@ -57,6 +57,7 @@ In the [CY2024 OPPS/ASC Final Rule](https://www.federalregister.gov/documents/20
 
 #####  MRF Information
 | Requirement           | Regulation cite                                                                                                                                      | Compliance Date |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 | MRF Date              | [45 CFR § 180.50 (b)(2)(i)(B)](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50#p-180.50(b)(2)(i)(B)) | July 1, 2024    |
 | CMS Template Version  | [45 CFR § 180.50 (b)(2)(i)(B)](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50#p-180.50(b)(2)(i)(B)) | July 1, 2024    |
 | Affirmation Statement | [45 CFR § 180.50 (a)(3)(ii)](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50#p-180.50(a)(3)(ii))     | July 1, 2024    |
