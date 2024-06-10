@@ -459,6 +459,38 @@
           "description": "145% payment adjustment for the item or service to which the modifier is appended"
         }
       ]
+    },
+    {
+      "description": "Co-surgeon",
+      "code": "62",
+      "modifier_payer_information": [
+        {
+          "payer_name": "Platform Health Insurance",
+          "plan_name": "PPO",
+          "description": "62.5% of the amount for the item or service to which this modifier is appended for each co-surgeon"
+        },
+        {
+          "payer_name": "Region Health Insurance",
+          "plan_name": "HMO",
+          "description": "60% of the amount for the item or service to which this modifier is appended for each co-surgeon"
+        }
+      ]
+    },
+    {
+      "description": "Bilateral procedure with co-surgeon",
+      "code": "50|62",
+      "modifier_payer_information": [
+        {
+          "payer_name": "Platform Health Insurance",
+          "plan_name": "PPO",
+          "description": "93.75% of the amount for the item or service to which this combination of modifiers is appended for each co-surgeon"
+        },
+        {
+          "payer_name": "Region Health Insurance",
+          "plan_name": "HMO",
+          "description": "87% of the amount for the item or service to which this combination of modifiers is appended for each co-surgeon"
+        }
+      ]
     }
   ],
   "general_contract_provisions": [
