@@ -81,15 +81,15 @@ CMS recommends that the hospital encode 999999999 (nine 9s) in the data element 
 
 The following valid values for `drug_type_of_measurement` are based on two sets of industry standards; National Drug Code and National Council for Prescription Drug Programs.
 
-| Standard Name | Reporting Value | 
+| Standard Name | Valid Value | 
 | ------------- | --------------- | 
-| GR | Grams |
-| ME | Milligrams |
-| ML | Milliliters | 
-| UN | Unit | 
-| F2 | International Unit | 
-| EA | Each | 
-| GM | Gram | 
+| Grams | GR |
+| Milligrams | ME |
+| Milliliters | ML | 
+| Unit | UN | 
+| International Unit | F2 |
+| Each | EA | 
+| Gram | GM | 
 
 ### Additional Generic Notes Notes
 If using the CSV Tall template, this data element can be used for both additional payer-specific and general information about the standard charge for an item or service.
@@ -125,7 +125,7 @@ Hospital items and services may be associated with a variety of billing codes or
 
 The value "LOCAL" may be used for internal accounting codes in conjunction with another billing code for that item or service. However, if no other code types are available for a particular item or service, "LOCAL" may be used as a valid value.
 
-| Standard Name | Reporting Value | 
+| Standard Name | Valid Value | 
 | ------------- | --------------- | 
 | Current Procedural Terminology | CPT |
 | National Drug Code | NDC |
