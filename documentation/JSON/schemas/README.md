@@ -4,7 +4,7 @@
 
 This version of the JSON schema includes all data dictionary technical specifications related to data elements, value encoding, and conditional checks that are required for implementation beginning 7/1/2024 and 1/1/2025. Users of this schema will not have to perform any additional manual changes to their file to meet all data dictionary technical specifications that become effective beginning 7/1/2024 and 1/1/2025. Users should check for errors using the validator tool found here: https://cmsgov.github.io/hpt-tool/
 
-#### [V2.2.1](./V2.2.1_Hospital_price_transparency_schema.json) – Patch to January 1, 2025 Implementation date schema _New – 3/11/2025_
+#### [V2.2.1](./V2.2.1_Hospital_price_transparency_schema.json) – Patch to January 1, 2025 Implementation date schema _New – 3/19/2025_
 
 This version is a patch update to the V2.2.0 JSON schema that clarifies the error output when there are issues with how the hospital has encoded the `code_information` object. This optional schema version is recommended as the starting point for hospitals building new JSON machine-readable files (MRFs). Users should check for errors using the validator tool found here: https://cmsgov.github.io/hpt-tool/
 
