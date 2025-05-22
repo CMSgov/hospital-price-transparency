@@ -75,7 +75,7 @@ If a `--` is encountered in the following table, then the instruction does not a
 Information for this data element should be encoded only when the payer-specific negotiated charge has been established as a percentage and no standard dollar amount can be calculated. This data element will contain the numeric representation of the percentage not as a decimal (70.5% is to be entered as “70.5” and not “.705”). If you encode information for this data element, you must also calculate and encode a corresponding estimated allowed amount for that item or service.
 
 ### Additional Notes for `estimated_amount`
-CMS recommends that the hospital encode 999999999 (nine 9s) in the data element value to indicate that there is not sufficient historic claims history to derive the estimated allowed amount, and then update the file when sufficient history is available. As a guide for the threshold for sufficient history, we suggest hospitals use [the CMS Cell Suppression Policy](https://www.hhs.gov/guidance/document/cms-cell-suppression-policy) established in January, 2020. Additionally if the hospital wishes to provide further context for the lack of data they can do so in the appropriate additional notes field.
+Please see updated Hospital Price Transparency guidance implementing the President's Executive Order "Making America Healthy Again by Empowering Patients with Clear, Accurate, and Actionable Healthcare Pricing Information," available on the HPT Resources webpage at https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency/resources.
 
 ### Additional Notes for `drug_type_of_measurement` Values
 
