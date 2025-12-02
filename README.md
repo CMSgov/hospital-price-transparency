@@ -51,7 +51,7 @@ The following is the technical documentation for the allowable formats:
 
 # Implementation Timeline
 
-In the CY2026 OPPS/ASC Final Rule, CMS finalized the addition and removal of several required data elements from the CMS templates that are effective January 1, 2026, with CMS enforcement beginning April 1, 2026.
+In the [CY2026 OPPS/ASC Final Rule](https://www.federalregister.gov/documents/2025/11/25/2025-20907/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment), CMS finalized the addition and removal of several required data elements from the CMS templates that are effective January 1, 2026, with CMS enforcement beginning April 1, 2026.
 
 ### New Data Elements
 
