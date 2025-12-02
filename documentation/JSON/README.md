@@ -1,6 +1,6 @@
 # **Hospital Price Transparency JSON Data Dictionary v3.0**
 
-The v3.0 data dictionary includes formatting updates and new regulatory requirements from the Calendar Year 2026 Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment System final rule with comment period (CY 2026 OPPS/ASC Final Rule) that are effective January 1, 2026, with CMS enforcement beginning April 1, 2026.
+The v3.0 data dictionary includes formatting updates and new regulatory requirements from the Calendar Year 2026 Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment System final rule with comment period ([CY 2026 OPPS/ASC Final Rule](https://www.federalregister.gov/documents/2025/11/25/2025-20907/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment)) that are effective January 1, 2026, with CMS enforcement beginning April 1, 2026.
 
 Review this entire data dictionary for how to disclose data elements in JSON and find the [JSON schemas here](./schemas) to begin building your hospital machine readable file (MRF). For an explanation of how to interpret the data element tables, review the [How to Read the Data Dictionary Tables](../HOW_TO_READ_DATA_DICTIONARY.md) information.
 

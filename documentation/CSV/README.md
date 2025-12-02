@@ -1,6 +1,6 @@
 # **Hospital Price Transparency CSV Data Dictionary v3.0**
 
-The v3.0 data dictionary includes formatting updates and new regulatory requirements from the Calendar Year 2026 Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment System final rule (CY 2026 OPPS/ASC Final Rule) that are effective January 1, 2026, with CMS enforcement beginning April 1, 2026.
+The v3.0 data dictionary includes formatting updates and new regulatory requirements from the Calendar Year 2026 Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment System final rule ([CY 2026 OPPS/ASC Final Rule](https://www.federalregister.gov/documents/2025/11/25/2025-20907/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment)) that are effective January 1, 2026, with CMS enforcement beginning April 1, 2026.
 
 Review this entire data dictionary for how to disclose data elements in CSV and find the [CSV "Tall" template here](./templates/V3.0.0_Tall_CSV_Format_Template.csv) and [CSV "Wide" template here](./templates/V3.0.0_Wide_CSV_Format_Template.csv) to begin building your hospital MRF. For an explanation of how to interpret the data element tables, review the [How to Read the Data Dictionary Tables](../HOW_TO_READ_DATA_DICTIONARY.md) information.
 
@@ -19,7 +19,7 @@ For CSV, hospitals may choose either a "wide" or "tall" layout. The CSV MRF must
 - Ensure all [conditional requirements](#conditional-requirements) are met for an MRF to be considered valid.
 - Do not repeat column headers in row 1 and 3. Ensure each header is unique.
 
-Encode the headers and valid values according to the data element implementation timeline in the HPT regulation ([45 CFR § 180.50](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50)) as finalized in the _CY2026 OPPS/ASC_ final rule.
+Encode the headers and valid values according to the data element implementation timeline in the HPT regulation ([45 CFR § 180.50](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50)) as finalized in the CY2026 OPPS/ASC final rule.
 
 ## **General Data Elements**
 
