@@ -6,12 +6,12 @@ This document provides information about the changes between the hospital machin
 
 - [Changes applicable to all formats](#changes-applicable-to-all-formats) (CSV and JSON)
 
-  - Attestation statement replaces Affirmation statement
+  - [Attestation statement replaces Affirmation statement](#attestation-statement-replaces-affirmation-statement)
   - [New Attester Name and Type 2 Organizational NPI general data elements](#new-attester-name-and-type-2-organizational-npi-general-data-elements)
   - [New allowed values for code type](#new-allowed-values-for-code-type-data-element)
   - [Hospital location data element renamed location name](#hospital-location-data-element-renamed-location-name)
   - [Payer-specific charge requirement](#payer-specific-charge-requirement)
-  - Allowed amount data elements replace Estimated amount data element
+  - [Allowed amount data elements replace Estimated amount data element](#allowed-amount-data-elements-replace-estimated-amount)
 
 - [JSON-only changes](#json-only-changes)
 
