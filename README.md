@@ -65,6 +65,14 @@ In the [CY2026 OPPS/ASC Final Rule](https://www.federalregister.gov/documents/20
 | Ninetieth (90th) percentile allowed amount | 45 CFR § 180.50 (b)(2)(ii)(C)(2) | April 1, 2026 |
 | Count of allowed amounts | 45 CFR § 180.50 (b)(2)(ii)(C)(2) | April 1, 2026 |
 
+### Removed Data Elements
+| **Requirement** | **Regulation cite** |
+| --- | --- |
+| Affirmation Statement | [45 CFR § 180.50 (a)(3)(ii)](<https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50#p-180.50(a)(3)(ii)>)
+| Estimated Allowed Amount | [45 CFR § 180.50 (b)(2)(ii)(C)](<https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-E/part-180/subpart-B/section-180.50#p-180.50(b)(2)(ii)(C)>)
+
+
+
 In the [CY2024 OPPS/ASC Final Rule](https://www.federalregister.gov/documents/2023/11/22/2023-24293/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment), CMS finalized a requirement for hospitals to adopt a CMS template and encode standard charge information for a subset of data elements by July 1, 2024, and all required data elements by January 1, 2025, as noted in the following tables:
 
 #### CMS Template Required Data Elements and Enforcement Timeline
