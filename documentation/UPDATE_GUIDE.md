@@ -16,7 +16,7 @@ This document provides information about the changes between the hospital machin
 - [JSON-only changes](#json-only-changes)
 
   - [New optional attribute in Modifier Information object](#new-optional-attribute-in-modifier-information-object)
-  - [New optional attribute in Standard Charge Information object](#new-optional-attribute-in-standard-charge-information-object)
+  - [New optional attribute in Standard Charge object](#new-optional-attribute-in-standard-charge-object)
   - [Drug unit of measurement data type change](#drug-unit-of-measurement-data-type-change)
 
 ## **Changes applicable to all formats**
@@ -108,7 +108,7 @@ The updated list of conditional requirements are in the [CSV Data Dictionary](./
 
 A Modifier Information object may now contain a "setting" attribute. The allowed values for this attribute are the same as for the "setting" attribute in the Standard Charge object. See the updated definition for the Modifier Information object in the [JSON Data Dictionary](./JSON/README.md#modifier-information-object).
 
-### **New optional attribute in Standard Charge Information object**
+### **New optional attribute in Standard Charge object**
 
 A Standard Charge object may now contain a "modifier_code" attribute. This attribute is defined as an array of strings, each of which should be a modifier code present in a Modifier Information object. See the updated definition for the Standard Charge object in the [JSON Data Dictionary](./JSON/README.md##standard-charge-object).
 
