@@ -110,7 +110,7 @@ A Modifier Information object may now contain a "setting" attribute. The allowed
 
 ### **New optional attribute in Standard Charge Information object**
 
-A Standard Charge Information object may now contain a "modifier_code" attribute. This attribute is defined as an array of strings, each of which should be a modifier code present in a Modifier Information object. See the updated definition for the Standard Charge Information object in the [JSON Data Dictionary](./JSON/README.md#standard-charge-information-object).
+A Standard Charge object may now contain a "modifier_code" attribute. This attribute is defined as an array of strings, each of which should be a modifier code present in a Modifier Information object. See the updated definition for the Standard Charge object in the [JSON Data Dictionary](./JSON/README.md##standard-charge-object).
 
 ### **Drug unit of measurement data type change**
 
