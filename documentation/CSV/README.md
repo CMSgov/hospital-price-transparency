@@ -131,7 +131,7 @@ If using the CSV Wide template, use the "Additional Generic Notes" data element 
 
 ### Additional CSV Placeholder Notes
 
-There are a few CSV data elements that have placeholders that must be updated by the developer of the MRF. Placeholders can be identified as an item in brackets `[ ]` and are found in column headers (rows 1 and 3). For example, both data elements `standard_charge | [payer_name] | [plan_name] | algorithm` and `code | [i]` on row 3 contain placeholders that must be replaced with valid values.
+There are a few CSV data elements that have placeholders that must be updated by the developer of the MRF or it will generate a validator error. Placeholders can be identified as an item in brackets `[ ]` and are found in column headers (rows 1 and 3). For example, both data elements `standard_charge | [payer_name] | [plan_name] | algorithm` and `code | [i]` on row 3 contain placeholders that must be replaced with valid values.
 
 There are four different types of placeholders in the MRF: `[state]`, `[i]`, `[plan_name]`, and `[payer_name]`.
 
