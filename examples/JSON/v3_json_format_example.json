@@ -1,6 +1,6 @@
 {
   "hospital_name": "West Mercy Hospital",
-  "last_updated_on": "2025-11-14",
+  "last_updated_on": "2026-04-01",
   "version": "3.0.0",
   "location_name": ["West Mercy Hospital", "West Mercy Surgical Center"],
   "hospital_address": [
@@ -8,128 +8,388 @@
     "23 Ocean Ave, San Jose, CA 94088"
   ],
   "license_information": {
-    "license_number": "50056",
-    "state": "CA"
+    "state": "CA",
+    "license_number": "50056"
   },
-  "type_2_npi": ["0000000001", "0000000002", "0000000003"],
   "attestation": {
     "attestation": "To the best of its knowledge and belief, this hospital has included all applicable standard charge information in accordance with the requirements of 45 CFR 180.50, and the information encoded is true, accurate, and complete as of the date in the file. This hospital has included all payer-specific negotiated charges in dollars that can be expressed as a dollar amount. For payer-specific negotiated charges that cannot be expressed as a dollar amount in the machine-readable file or not knowable in advance, the hospital attests that the payer-specific negotiated charge is based on a contractual algorithm, percentage or formula that precludes the provision of a dollar amount and has provided all necessary information available to the hospital for the public to be able to derive the dollar amount, including, but not limited to, the specific fee schedule or components referenced in such percentage, algorithm or formula.",
     "confirm_attestation": true,
     "attester_name": "Leigh Attester"
   },
+  "type_2_npi": ["0000000001", "0000000002", "0000000003"],
+  "general_contract_provisions": [
+    {
+      "payer_name": "Platform Health Insurance",
+      "provisions": "When total claim charges exceed $200,000.00 for a Platform Health Insurance plan, the entire claim will be reimbursed at 50% of charges. This amount will supersede any other contracted rate that would otherwise apply."
+    },
+    {
+      "payer_name": "Region Health Insurance",
+      "provisions": "When total claim charges exceed $250,000.00 for a Region Health Insurance plan, the entire claim will be reimbursed at 45% of charges. This amount will supersede any other contracted rate that would otherwise apply."
+    }
+  ],
   "standard_charge_information": [
     {
-      "description": "Major hip and knee joint replacement or reattachment of lower extremity without mcc",
+      "description": "MRI of brain (no contrast)",
       "code_information": [
         {
-          "code": "470",
-          "type": "MS-DRG"
+          "code": "611",
+          "type": "RC"
         },
         {
-          "code": "175869",
-          "type": "LOCAL"
-        }
-      ],
-      "standard_charges": [
-        {
-          "setting": "inpatient",
-          "minimum": 25678,
-          "maximum": 25678,
-          "payers_information": [
-            {
-              "payer_name": "Platform Health Insurance",
-              "plan_name": "PPO",
-              "standard_charge_percentage": 50,
-              "median_amount": 21345.12,
-              "10th_percentile": 18765.9,
-              "90th_percentile": 39627.88,
-              "count": "23",
-              "methodology": "percent of total billed charges"
-            },
-            {
-              "payer_name": "Region Health Insurance",
-              "plan_name": "HMO",
-              "standard_charge_dollar": 25678,
-              "standard_charge_algorithm": "If days in visit is less than or equal to 3, then the standard charge is $25,678.00. Otherwise, the standard charge is $25,678.00 plus 80% of billed charges on the days exceeding 3 days.",
-              "median_amount": 25678,
-              "10th_percentile": 25678,
-              "90th_percentile": 45964,
-              "count": "43",
-              "methodology": "other",
-              "additional_payer_notes": "The standard charge methodology is a case rate plus additional modifications."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "Heart transplant or implant of heart assist system without mcc",
-      "code_information": [
-        {
-          "code": "002",
-          "type": "MS-DRG"
-        },
-        {
-          "code": "123478",
-          "type": "LOCAL"
-        }
-      ],
-      "standard_charges": [
-        {
-          "setting": "inpatient",
-          "payers_information": [
-            {
-              "payer_name": "Platform Health Insurance",
-              "plan_name": "PPO",
-              "standard_charge_percentage": 45,
-              "methodology": "percent of total billed charges",
-              "count": "0",
-              "additional_payer_notes": "No services performed during 15-month lookback period."
-            },
-            {
-              "payer_name": "Region Health Insurance",
-              "plan_name": "HMO",
-              "standard_charge_percentage": 40,
-              "standard_charge_algorithm": "40% of billed charges up to billed charges of $1 million, then 50% of billed charges for billed charges in excess of $1 million.",
-              "methodology": "percent of total billed charges",
-              "median_amount": 560043.22,
-              "10th_percentile": 256789.17,
-              "90th_percentile": 945001.98,
-              "count": "1 through 10"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "Evaluation of hearing function to determine candidacy for, or postoperative status of, surgically implanted hearing device; first hour",
-      "code_information": [
-        {
-          "code": "92626",
+          "code": "70551",
           "type": "CPT"
         }
       ],
       "standard_charges": [
         {
           "setting": "outpatient",
-          "gross_charge": 150,
-          "discounted_cash": 125,
-          "minimum": 98.98,
-          "maximum": 105.34,
+          "minimum": 250,
+          "maximum": 400,
+          "gross_charge": 1200,
+          "discounted_cash": 1080,
           "payers_information": [
             {
               "payer_name": "Platform Health Insurance",
               "plan_name": "PPO",
-              "standard_charge_dollar": 98.98,
               "methodology": "fee schedule",
-              "additional_payer_notes": "110% of the Medicare fee schedule"
+              "standard_charge_dollar": 400
             },
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 105.34,
               "methodology": "fee schedule",
-              "additional_payer_notes": "115% of the state's workers' compensation amount"
+              "standard_charge_dollar": 250
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Inguinal hernia repair",
+      "code_information": [
+        {
+          "code": "360",
+          "type": "RC"
+        },
+        {
+          "code": "49505",
+          "type": "CPT"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "minimum": 360,
+          "maximum": 8000,
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "methodology": "case rate",
+              "standard_charge_dollar": 8000
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "methodology": "fee schedule",
+              "additional_payer_notes": "This service paid at 140% of the OPPS APC rate.",
+              "standard_charge_dollar": 360
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Major hip and knee joint replacement or reattachment of lower extremity without mcc",
+      "code_information": [
+        {
+          "code": "470",
+          "type": "MS-DRG"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "minimum": 14000,
+          "maximum": 49000,
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "methodology": "case rate",
+              "additional_payer_notes": "This inpatient MS-DRG is paid at 200% of the Medicare IPPS Federal Operating and Capital Federal specific portion.",
+              "standard_charge_dollar": 49000
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "methodology": "case rate",
+              "standard_charge_dollar": 14000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Medical surgical bed",
+      "code_information": [
+        {
+          "code": "120",
+          "type": "RC"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "minimum": 1400,
+          "maximum": 4500,
+          "gross_charge": 5000,
+          "discounted_cash": 4500,
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "methodology": "fee schedule",
+              "additional_payer_notes": "This service paid at 90% of the gross charge.",
+              "standard_charge_dollar": 4500
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "methodology": "per diem",
+              "standard_charge_dollar": 1400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Basic metabolic panel",
+      "code_information": [
+        {
+          "code": "301",
+          "type": "RC"
+        },
+        {
+          "code": "80048",
+          "type": "CPT"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "minimum": 125,
+          "maximum": 150,
+          "gross_charge": 300,
+          "discounted_cash": 270,
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "methodology": "fee schedule",
+              "additional_payer_notes": "This laboratory service paid at 50% of the gross charge.",
+              "standard_charge_dollar": 150
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 125
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Cesarean section without sterilization with mcc",
+      "code_information": [
+        {
+          "code": "786",
+          "type": "MS-DRG"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "methodology": "case rate",
+              "standard_charge_algorithm": "Allowed amount = $8,000 + MAX (0, ($3,000 x (covered days - 4))",
+              "median_amount": 11000,
+              "10th_percentile": 8000,
+              "90th_percentile": 17000,
+              "count": "1 through 10"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "methodology": "case rate",
+              "standard_charge_algorithm": "For this specific service, if length of stay is less than 2 days, the admission is paid a one-day case rate of $3,000. If length of stay is 2 days or greater, the admission is paid at $7,500.",
+              "median_amount": 7500,
+              "10th_percentile": 3000,
+              "90th_percentile": 7500,
+              "count": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Pacemaker",
+      "code_information": [
+        {
+          "code": "278",
+          "type": "RC"
+        },
+        {
+          "code": "C1785",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "gross_charge": 40000,
+          "discounted_cash": 36000,
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "methodology": "other",
+              "additional_payer_notes": "Methodology is explained in algorithm data element.",
+              "standard_charge_algorithm": "Allowed amount for service is 110% of the actual cost, based on supplier invoice.",
+              "median_amount": 23123.46,
+              "10th_percentile": 16998.38,
+              "90th_percentile": 50000.77,
+              "count": "18"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "methodology": "other",
+              "additional_payer_notes": "Methodology is explained in algorithm data element.",
+              "standard_charge_algorithm": "Allowed amount for service is 120% of the actual cost, based on supplier invoice.",
+              "median_amount": 25086.61,
+              "10th_percentile": 18999.93,
+              "90th_percentile": 60762.44,
+              "count": "37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Psychoses",
+      "code_information": [
+        {
+          "code": "885",
+          "type": "MS-DRG"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "methodology": "other",
+              "additional_payer_notes": "Methodology is explained in algorithm data element.",
+              "standard_charge_algorithm": "Allowed amount for service is the lesser of: $24,000 and 80% of total billed charges associated with this specific service.",
+              "median_amount": 22157.22,
+              "10th_percentile": 15230.18,
+              "90th_percentile": 24000,
+              "count": "1 through 10"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "methodology": "other",
+              "additional_payer_notes": "Methodology is explained in algorithm data element.",
+              "standard_charge_algorithm": "Allowed amount is 130% of the Medicare IPF PPS pricer amount; hospital cannot provide a single standard dollar amount due to the following variable factors: patient diagnosis, length of stay.",
+              "median_amount": 18230.33,
+              "10th_percentile": 16100.21,
+              "90th_percentile": 20500.9,
+              "count": "50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Heart transplant or implant of heart assist system with mcc",
+      "code_information": [
+        {
+          "code": "001",
+          "type": "MS-DRG"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "methodology": "case rate",
+              "additional_payer_notes": "Methodology is explained in algorithm data element.",
+              "standard_charge_algorithm": "Phase 1 services prior to transplant admission are paid at 40% of charges; Transplant admission is paid at $200,000 case rate; Phase 3 post-transplant services are paid at 30% of charges.",
+              "median_amount": 230554.65,
+              "10th_percentile": 210003.62,
+              "90th_percentile": 280159.25,
+              "count": "12"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "methodology": "other",
+              "additional_payer_notes": "Methodology is explained in algorithm data element.  No services performed during 15-month lookback period.",
+              "standard_charge_algorithm": "Allowed amount for service is the lesser of: $550,000 and 95% of the total relevant MS-DRG amount for this specific service.",
+              "count": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ER level 3",
+      "code_information": [
+        {
+          "code": "450",
+          "type": "RC"
+        },
+        {
+          "code": "99283",
+          "type": "CPT"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "gross_charge": 4000,
+          "discounted_cash": 3600,
+          "payers_information": [
+            {
+              "payer_name": "Platform Health Insurance",
+              "plan_name": "PPO",
+              "methodology": "percent of total billed charges",
+              "standard_charge_percentage": 80,
+              "median_amount": 12000.12,
+              "10th_percentile": 5123.74,
+              "90th_percentile": 16784.22,
+              "count": "299"
+            },
+            {
+              "payer_name": "Region Health Insurance",
+              "plan_name": "HMO",
+              "methodology": "percent of total billed charges",
+              "standard_charge_percentage": 75,
+              "median_amount": 6502.54,
+              "10th_percentile": 4122.7,
+              "90th_percentile": 10001.27,
+              "count": "175"
             }
           ]
         }
@@ -145,38 +405,95 @@
       ],
       "standard_charges": [
         {
+          "setting": "inpatient",
+          "minimum": 1500,
+          "maximum": 1500,
           "gross_charge": 2500,
           "discounted_cash": 2250,
-          "minimum": 1200,
-          "maximum": 2000,
-          "setting": "inpatient",
           "payers_information": [
             {
               "payer_name": "Platform Health Insurance",
               "plan_name": "PPO",
-              "standard_charge_dollar": 1500,
-              "methodology": "per diem"
-            },
+              "methodology": "per diem",
+              "standard_charge_dollar": 1500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Behavioral health; residential (hospital residential treatment program), without room and board, per diem, days 1-3",
+      "code_information": [
+        {
+          "code": "H0017",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "minimum": 2000,
+          "maximum": 2000,
+          "gross_charge": 2500,
+          "discounted_cash": 2250,
+          "payers_information": [
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 2000,
               "methodology": "per diem",
-              "additional_payer_notes": "per diem, days 1-3"
-            },
+              "standard_charge_dollar": 2000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Behavioral health; residential (hospital residential treatment program), without room and board, per diem, days 4-5",
+      "code_information": [
+        {
+          "code": "H0017",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "minimum": 1800,
+          "maximum": 1800,
+          "gross_charge": 2500,
+          "discounted_cash": 2250,
+          "payers_information": [
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 1800,
               "methodology": "per diem",
-              "additional_payer_notes": "per diem, days 4-5"
-            },
+              "standard_charge_dollar": 1800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Behavioral health; residential (hospital residential treatment program), without room and board, per diem, days 6+",
+      "code_information": [
+        {
+          "code": "H0017",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "minimum": 1200,
+          "maximum": 1200,
+          "gross_charge": 2500,
+          "discounted_cash": 2250,
+          "payers_information": [
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 1200,
               "methodology": "per diem",
-              "additional_payer_notes": "per diem, days 6+"
+              "standard_charge_dollar": 1200
             }
           ]
         }
@@ -192,31 +509,31 @@
       ],
       "standard_charges": [
         {
-          "gross_charge": 13000,
-          "discounted_cash": 12000,
+          "setting": "outpatient",
           "minimum": 8000,
           "maximum": 10000,
-          "setting": "outpatient",
+          "gross_charge": 13000,
+          "discounted_cash": 12000,
           "payers_information": [
             {
               "payer_name": "Platform Health Insurance",
               "plan_name": "PPO",
-              "standard_charge_dollar": 8000,
               "methodology": "case rate",
-              "additional_payer_notes": "Negotiated standard charge without surgery and without rule out myocardial infarction"
+              "additional_payer_notes": "Negotiated standard charge without surgery and without rule out myocardial infarction",
+              "standard_charge_dollar": 8000
             },
             {
               "payer_name": "Platform Health Insurance",
               "plan_name": "PPO",
-              "standard_charge_dollar": 10000,
               "methodology": "case rate",
-              "additional_payer_notes": "Negotiated standard charge without surgery and with rule out myocardial infarction"
+              "additional_payer_notes": "Negotiated standard charge without surgery and with rule out myocardial infarction",
+              "standard_charge_dollar": 10000
             },
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 9000,
-              "methodology": "case rate"
+              "methodology": "case rate",
+              "standard_charge_dollar": 9000
             }
           ]
         }
@@ -236,23 +553,23 @@
       ],
       "standard_charges": [
         {
-          "gross_charge": 2,
-          "discounted_cash": 1.5,
+          "setting": "both",
           "minimum": 0.75,
           "maximum": 0.95,
-          "setting": "both",
+          "gross_charge": 2,
+          "discounted_cash": 1.5,
           "payers_information": [
             {
               "payer_name": "Platform Health Insurance",
               "plan_name": "PPO",
-              "standard_charge_dollar": 0.75,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.75
             },
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 0.95,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.95
             }
           ]
         }
@@ -272,17 +589,17 @@
       ],
       "standard_charges": [
         {
-          "gross_charge": 5,
-          "discounted_cash": 4,
+          "setting": "both",
           "minimum": 3,
           "maximum": 3,
-          "setting": "both",
+          "gross_charge": 5,
+          "discounted_cash": 4,
           "payers_information": [
             {
               "payer_name": "Platform Health Insurance",
               "plan_name": "PPO",
-              "standard_charge_dollar": 3,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 3
             }
           ]
         }
@@ -302,17 +619,17 @@
       ],
       "standard_charges": [
         {
-          "gross_charge": 500,
-          "discounted_cash": 400,
+          "setting": "both",
           "minimum": 350,
           "maximum": 350,
-          "setting": "both",
+          "gross_charge": 500,
+          "discounted_cash": 400,
           "payers_information": [
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 350,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 350
             }
           ]
         }
@@ -336,23 +653,23 @@
       ],
       "standard_charges": [
         {
-          "gross_charge": 75,
-          "discounted_cash": 45,
+          "setting": "both",
           "minimum": 35,
           "maximum": 37,
-          "setting": "both",
+          "gross_charge": 75,
+          "discounted_cash": 45,
           "payers_information": [
             {
               "payer_name": "Platform Health Insurance",
               "plan_name": "PPO",
-              "standard_charge_dollar": 35,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 35
             },
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 37,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 37
             }
           ]
         }
@@ -372,23 +689,23 @@
       ],
       "standard_charges": [
         {
-          "gross_charge": 515,
-          "discounted_cash": 450,
+          "setting": "both",
           "minimum": 265,
           "maximum": 355,
-          "setting": "both",
+          "gross_charge": 515,
+          "discounted_cash": 450,
           "payers_information": [
             {
               "payer_name": "Platform Health Insurance",
               "plan_name": "PPO",
-              "standard_charge_dollar": 265,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 265
             },
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 355,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 355
             }
           ]
         }
@@ -408,23 +725,23 @@
       ],
       "standard_charges": [
         {
-          "gross_charge": 120,
-          "discounted_cash": 75,
+          "setting": "both",
           "minimum": 65,
           "maximum": 70,
-          "setting": "both",
+          "gross_charge": 120,
+          "discounted_cash": 75,
           "payers_information": [
             {
               "payer_name": "Platform Health Insurance",
               "plan_name": "PPO",
-              "standard_charge_dollar": 70,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 70
             },
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 65,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 65
             }
           ]
         }
@@ -448,23 +765,23 @@
       ],
       "standard_charges": [
         {
-          "gross_charge": 30,
-          "discounted_cash": 25,
+          "setting": "both",
           "minimum": 8,
           "maximum": 15,
-          "setting": "both",
+          "gross_charge": 30,
+          "discounted_cash": 25,
           "payers_information": [
             {
               "payer_name": "Platform Health Insurance",
               "plan_name": "PPO",
-              "standard_charge_dollar": 8,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8
             },
             {
               "payer_name": "Region Health Insurance",
               "plan_name": "HMO",
-              "standard_charge_dollar": 15,
-              "methodology": "fee schedule"
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 15
             }
           ]
         }
@@ -492,46 +809,36 @@
     {
       "description": "Co-surgeon",
       "code": "62",
+      "setting": "both",
       "modifier_payer_information": [
         {
           "payer_name": "Platform Health Insurance",
           "plan_name": "PPO",
-          "description": "62.5% of the amount for the item or service to which this modifier is appended for each co-surgeon"
+          "description": "62.5% of the amount for the item or service is appended for each co-surgeon"
         },
         {
           "payer_name": "Region Health Insurance",
           "plan_name": "HMO",
-          "description": "60% of the amount for the item or service to which this modifier is appended for each co-surgeon"
+          "description": "60% of the amount for the item or service is appended for each co-surgeon"
         }
       ]
     },
     {
       "description": "Bilateral procedure with co-surgeon",
       "code": "50|62",
+      "setting": "both",
       "modifier_payer_information": [
         {
           "payer_name": "Platform Health Insurance",
           "plan_name": "PPO",
-          "description": "93.75% of the amount for the item or service to which this combination of modifiers is appended for each co-surgeon"
+          "description": "93.75% of the amount for the item or service is appended for each co-surgeon"
         },
         {
           "payer_name": "Region Health Insurance",
           "plan_name": "HMO",
-          "description": "87% of the amount for the item or service to which this combination of modifiers is appended for each co-surgeon"
+          "description": "87% of the amount for the item or service is appended for each co-surgeon"
         }
       ]
-    }
-  ],
-  "general_contract_provisions": [
-    {
-      "payer_name": "Platform Health Insurance",
-      "plan_name": "PPO",
-      "provisions": "When total claim charges exceed $200,000.00 for a Platform Health Insurance plan, the entire claim will be reimbursed at 50% of charges. This amount will supersede any other contracted rate that would otherwise apply."
-    },
-    {
-      "payer_name": "Region Health Insurance",
-      "plan_name": "HMO",
-      "provisions": "When total claim charges exceed $250,000.00 for a Region Health Insurance plan, the entire claim will be reimbursed at 45% of charges. This amount will supersede any other contracted rate that would otherwise apply."
     }
   ]
 }
