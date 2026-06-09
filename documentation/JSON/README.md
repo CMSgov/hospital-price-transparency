@@ -126,7 +126,7 @@ An [example](../../examples/JSON/V3.0.0_JSON_Format_Example.json) of this would 
 | --- | --- | --- | --- | :-: |
 | **payer_name** | Payer Name | String | The name of the third-party payer that is, by statute, contract, or agreement, legally responsible for payment of a claim for a healthcare item or service. | Yes |
 | **plan_name** | Plan Name | String | The name of the payer's specific plan associated with the standard charge. | Yes |
-| **additional_payer_notes** | Additional Payer Notes | String | A free text data element used to help explain data in the file that is related to a payer-specific negotiated charge. | No |
+| **additional_payer_notes** | Additional Payer-Specific Notes | String | A free text data element used to help explain data in the file that is related to a payer-specific negotiated charge. | No |
 | **standard_charge_dollar** | Payer-Specific Negotiated Charge: Dollar Amount | Numeric | Payer-specific negotiated charge (encoded as a dollar amount) that a hospital has negotiated with a third-party payer for the corresponding item or service. | No |
 | **standard_charge_percentage** | Payer-Specific Negotiated Charge: Percentage | Numeric | Payer-specific negotiated charge (encoded as a percentage) that a hospital has negotiated with a third party payer for an item or service. See [additional percentage notes](#additional-notes-for-standard-charge-percentage-and-algorithm) | No |
 | **standard_charge_algorithm** | Payer-Specific Negotiated Charge: Algorithm | String | Payer-specific negotiated charge (encoded as an algorithm) that a hospital has negotiated with a third party payer for the corresponding item or service. | No |
@@ -208,7 +208,7 @@ The "Standard Charge Methodology" data element describes the method used by the 
 - `fee schedule`: The payer-specific negotiated charge is based on a fee schedule. Examples of common fee schedules include Medicare, Medicaid, commercial payer, and workers compensation. The dollar amount that is based on the indicated fee schedule should be encoded into the "Payer-specific Negotiated Charge: Dollar Amount" data element. For standard charges based on a percentage of a known fee schedule, the dollar amount should be calculated and encoded in the "Payer-specific Negotiated Charge: Dollar Amount" data element.
 - `percent of total billed charges`: The payer-specific negotiated charge is based on a percentage of the total billed charges for an item or service. This percentage may vary depending on certain pre-determined criteria being met.
 - `per diem`: The per day charge for providing hospital items and services.
-- `other`: If the standard charge methodology used to establish a payer-specific negotiated charge cannot be described by one of the types of standard charge methodology above, select 'other' and encode a detailed explanation of the contracting arrangement in the "Additional Payer Notes" data attribute.
+- `other`: If the standard charge methodology used to establish a payer-specific negotiated charge cannot be described by one of the types of standard charge methodology above, select 'other' and encode a detailed explanation of the contracting arrangement in the "Additional Payer-Specific Notes" data attribute.
 
 ## Optional Data Attributes
 
