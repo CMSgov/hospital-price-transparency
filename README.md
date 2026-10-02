@@ -48,8 +48,8 @@ This repository houses the required CMS templates, in a CSV “tall”, CSV “w
 
 The following is the technical documentation for the allowable formats:
 
-- [CSV](https://github.com/CMSgov/hospital-price-transparency/tree/master/documentation/CSV)
-- [JSON](https://github.com/CMSgov/hospital-price-transparency/tree/master/documentation/JSON)
+- [CSV](./MRF/documentation/CSV)
+- [JSON](./MRF/documentation/JSON)
 
 # Implementation Timeline
 
