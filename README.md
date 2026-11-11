@@ -1,3 +1,4 @@
+[![CMS Transparency in Coverage](resources/images/HPT_banner.png?raw=true "Hospital Price Transparency")](https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency)
 # Hospital Price Transparency
 
 The hospital price transparency requirements are codified in regulations at 45 CFR Part 180 and applies to facilities that meet the definition of hospital (defined at 45 CFR § 180.20) and that are not otherwise excepted (see 45 CFR § 180.30(b)). Hospitals must make their standard charge information publicly available in two ways:
