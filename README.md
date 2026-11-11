@@ -5,9 +5,7 @@ The hospital price transparency requirements are codified in regulations at 45 C
 1. A machine-readable file containing a list of all standard charges for all items and services as provided in § 180.50, and;
 2. A consumer-friendly list of standard charges for a limited set of shoppable services as provided in § 180.60.
 
-This repository provides resources for both requirements. Choose the section below that matches what you are preparing:
-
-- **Machine-readable file**: Find CSV and JSON data dictionaries, templates, examples, and tools to build and validate your machine-readable file.
+This repository provides resources for the machine-readable file requirements including the CSV and JSON data dictionaries, templates, examples, and tools to build and validate your file.
 
 [Machine-readable File](#machine-readable-file) · [Resources and Support](#resources-and-support)
 
