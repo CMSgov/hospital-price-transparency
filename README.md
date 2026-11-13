@@ -19,60 +19,24 @@ To prepare your hospital’s machine-readable file:
 3. Create your file using the templates or schema and examples linked below.
 4. Check your completed file using the MRF validator.
 
-<table>
-  <tr>
-    <td width="154px"><img src="./resources/images/csv_start_here_button.png" /></td>
-    <td>
-      <h2>Developing a CSV MRF?</h2>
-      <div>
-        CSV files can use either a wide or tall layout. Review the CSV data dictionary for instructions on both layouts, then choose the matching template.
-      </div>
-      <div>
-        <a href="./MRF/documentation/CSV/">Read the CSV data dictionary</a>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">Then build your file: <a href="./MRF/documentation/CSV/templates/V3.0.0_Tall_CSV_Format_Template.csv">CSV tall template</a> - <a href="./MRF/documentation/CSV/templates/V3.0.0_Wide_CSV_Format_Template.csv">CSV wide template</a> - <a href="./MRF/examples/CSV/">View examples</a></td>
-  </tr>
-</table>
-<hr/>
-<table>
-  <tr>
-    <td width="154px"><img src="./resources/images/json_start_here_button.png"/></td>
-    <td>
-      <h2>Developing a JSON MRF?</h2>
-      <div>
-        Review the JSON data dictionary for descriptions of each data element and instructions for completing your file.
-      </div>
-      <div>
-        <a href="./MRF/documentation/JSON/">Read the JSON data dictionary</a>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">Then build your file: <a href="./MRF/documentation/JSON/schemas/">JSON schema and documentation</a> - <a href="./MRF/examples/JSON/">View examples</a></td>
-  </tr>
-</table>
-<hr/>
-<table>
-  <tr>
-    <td width="154px"><img src="./resources/images/cloud_icon.png" /></td>
-    <td>
-      <h2>Ready to check your MRF?</h2>
-      <div>
-        Use the online validator to check your hospital's CSV or JSON file and identify errors to correct.
-      </div>
-      <div>
-        <a href="https://cmsgov.github.io/hpt-tool/online-validator/">Open MRF validator</a>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">More MRF tools: <a href="https://cmsgov.github.io/hpt-tool/">File naming wizard and TXT file generator</a></td>
-  </tr>
-</table>
-<hr/>
+<h2>Developing a CSV MRF?</h2>
+
+CSV files can use either a wide or tall layout. Review the CSV data dictionary for instructions on both layouts, then choose the matching template. <a href="./MRF/documentation/CSV/">Read the CSV data dictionary</a>
+
+Then build your file: <a href="./MRF/documentation/CSV/templates/V3.0.0_Tall_CSV_Format_Template.csv">CSV tall template</a> - <a href="./MRF/documentation/CSV/templates/V3.0.0_Wide_CSV_Format_Template.csv">CSV wide template</a> - <a href="./MRF/examples/CSV/">View examples</a>
+
+
+<h2>Developing a JSON MRF?</h2>
+   
+Review the JSON data dictionary for descriptions of each data element and instructions for completing your file.<a href="./MRF/documentation/JSON/"> Read the JSON data dictionary</a>
+      
+Then build your file: <a href="./MRF/documentation/JSON/schemas/">JSON schema and documentation</a> - <a href="./MRF/examples/JSON/">View examples</a></td>
+
+<h2>Ready to check your MRF?</h2> 
+
+Use the online validator to check your hospital's CSV or JSON file and identify errors to correct. <a href="https://cmsgov.github.io/hpt-tool/online-validator/">Open MRF validator</a> 
+
+More MRF tools: <a href="https://cmsgov.github.io/hpt-tool/">File naming wizard and TXT file generator</a></td>
 
 ## Resources and Support
 
