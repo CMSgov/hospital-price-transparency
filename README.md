@@ -21,7 +21,7 @@ To prepare your hospital’s machine-readable file:
 
 <table>
   <tr>
-    <td width="154px"><img src="./resources/images/start_here.png" /></td>
+    <td width="154px"><img src="./resources/images/csv_start_here_button.png" /></td>
     <td>
       <h2>Developing a CSV MRF?</h2>
       <div>
@@ -39,7 +39,7 @@ To prepare your hospital’s machine-readable file:
 <hr/>
 <table>
   <tr>
-    <td width="154px"><img src="./resources/images/start_here.png" /></td>
+    <td width="154px"><img src="./resources/images/json_start_here_button.png"/></td>
     <td>
       <h2>Developing a JSON MRF?</h2>
       <div>
@@ -76,11 +76,13 @@ To prepare your hospital’s machine-readable file:
 
 ## Resources and Support
 
-Users should review the final rule(s) in their entirety as well as review any clarifying guidance provided on the Hospital Price Transparency Resources webpage to ensure compliance.
+Users should review the final rule(s) in their entirety as well as review any clarifying guidance provided on the [Hospital Price Transparency Resources](https://www.cms.gov/hospital-price-transparency/resources) webpage to ensure compliance.
 
-- Navigating GitHub Guide – A step-by-step guide that walks users new to GitHub through the information and available resources on this HPT repository.
-- Github Issues - Where people discuss issues related to the project.
-- Github Discussions - Use these channels for conversational topics (for example, "How do I…" or "What do you think about…" instead of bug reports or feature requests).
-- Hospital Price Transparency Tools - Link to webpage of tools to support hospitals in meeting the accessibility and MRF requirements including a MRF File Naming Wizard, a TXT File Generator, and a Validator that tests against the required CMS template and data specifications.
+- <a href="./resources/Navigating GitHub and the HPT Data Dictionary Guide.pdf/">Navigating GitHub Guide</a> - A step-by-step guide that walks users new to GitHub through the information and available resources on this HPT repository. 
+- [Github Issues](https://guides.github.com/features/issues/) - Where people discuss issues related to the project.
+- [Github Discussions](https://github.com/CMSgov/hospital-price-transparency/discussions) - Use these channels for conversational topics (for example, "How do I&hellip;" or "What do you think about&hellip;" instead of bug reports or feature requests).
+- [Hospital Price Transparency Tools](https://cmsgov.github.io/hpt-tool/) - Link to webpage of tools to support hospitals in meeting the accessibility and MRF requirements including a MRF File Naming Wizard, a TXT File Generator, and a Validator V2.0 that tests against the required CMS template and data specifications.
 
-Before posting a comment, issue, or question, please search through existing discussions and issues. There is a good chance that the topic in questions is already being discussed. Policy questions can be directed to: PriceTransparencyHospitalCharges@cms.hhs.gov. Hospitals undergoing an enforcement action may direct questions to: HPTCompliance@cms.hhs.gov.
+Before posting a comment, issue, or question, please search through existing discussions and issues. There is a good chance that the topic in questions is already being discussed.
+
+Policy questions can be directed to: PriceTransparencyHospitalCharges@cms.hhs.gov. Hospitals undergoing an enforcement action may direct questions to: HPTCompliance@cms.hhs.gov.
