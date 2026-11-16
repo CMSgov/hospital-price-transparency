@@ -8,8 +8,6 @@ The hospital price transparency requirements are codified in regulations at 45 C
 
 This repository provides resources for the machine-readable file requirements including the CSV and JSON data dictionaries, templates, examples, and tools to build and validate your file.
 
-[Machine-readable File](#machine-readable-file) · [Resources and Support](#resources-and-support)
-
 ## Machine-readable File
 
 To prepare your hospital’s machine-readable file:
@@ -21,7 +19,7 @@ To prepare your hospital’s machine-readable file:
 
 <table>
   <tr>
-    <td width="154px"><img src="./resources/images/csv_start_here_button.png" /></td>
+    <td width="154px"><a href="./MRF/documentation/CSV/"><img src="./resources/images/csv_start_here_button.png" /></a></td>
     <td>
       <h2>Developing a CSV MRF?</h2>
       <div>
@@ -39,7 +37,7 @@ To prepare your hospital’s machine-readable file:
 <hr/>
 <table>
   <tr>
-    <td width="154px"><img src="./resources/images/json_start_here_button.png"/></td>
+    <td width="154px"><a href="./MRF/documentation/JSON/"><img src="./resources/images/json_start_here_button.png"/></a></td>
     <td>
       <h2>Developing a JSON MRF?</h2>
       <div>
@@ -57,7 +55,7 @@ To prepare your hospital’s machine-readable file:
 <hr/>
 <table>
   <tr>
-    <td width="154px"><img src="./resources/images/cloud_icon.png" /></td>
+    <td width="154px"><a href="https://cmsgov.github.io/hpt-tool/online-validator/"><img src="./resources/images/cloud_icon.png" /></a></td>
     <td>
       <h2>Ready to check your MRF?</h2>
       <div>
@@ -69,7 +67,7 @@ To prepare your hospital’s machine-readable file:
     </td>
   </tr>
   <tr>
-    <td colspan="2">More MRF tools: <a href="https://cmsgov.github.io/hpt-tool/">File naming wizard and TXT file generator</a></td>
+    <td colspan="2">More MRF tools: Visit the <a href="https://cmsgov.github.io/hpt-tool/">Hospital Price Transparency tools page</a> for the <a href="https://cmsgov.github.io/hpt-tool/filename-wizard/">File Naming Wizard</a> and <a href="https://cmsgov.github.io/hpt-tool/txt-generator/">TXT File Generator</a>.</td> 
   </tr>
 </table>
 <hr/>
@@ -81,7 +79,7 @@ Users should review the final rule(s) in their entirety as well as review any cl
 - <a href="./resources/Navigating GitHub and the HPT Data Dictionary Guide.pdf/">Navigating GitHub Guide</a> - A step-by-step guide that walks users new to GitHub through the information and available resources on this HPT repository. 
 - [Github Issues](https://guides.github.com/features/issues/) - Where people discuss issues related to the project.
 - [Github Discussions](https://github.com/CMSgov/hospital-price-transparency/discussions) - Use these channels for conversational topics (for example, "How do I&hellip;" or "What do you think about&hellip;" instead of bug reports or feature requests).
-- [Hospital Price Transparency Tools](https://cmsgov.github.io/hpt-tool/) - Link to webpage of tools to support hospitals in meeting the accessibility and MRF requirements including a MRF File Naming Wizard, a TXT File Generator, and a Validator V2.0 that tests against the required CMS template and data specifications.
+- [Hospital Price Transparency Tools](https://cmsgov.github.io/hpt-tool/) - Link to webpage of tools to support hospitals in meeting the accessibility and MRF requirements including a MRF File Naming Wizard, a TXT File Generator, and a Validator that tests against the required CMS template and data specifications.
 
 Before posting a comment, issue, or question, please search through existing discussions and issues. There is a good chance that the topic in questions is already being discussed.
 
