@@ -84,22 +84,22 @@ Developed with input from hospitals, consumers, and consumer tool developers, th
 
 <table>
   <tr>
-    <td width="154px"><a href="./Shoppable services voluntary sample file/"><img src="./resources/images/cfd_start_here.png"/></a></td>
+    <td width="154px"><a href="./Consumer-friendly display/"><img src="./resources/images/cfd_start_here.png"/></a></td>
     <td>
       <h2>Developing a consumer-friendly display?</h2>
       <div>
         The shoppable services data dictionary contains descriptions of each data element and instructions for completing the shoppable services voluntary sample file.
       </div>
       <div>
-        <a href="./Shoppable services voluntary sample file/SHOPPABLE_SERVICES_VOLUNTARY_SAMPLE_FILE_DATA_DICTIONARY.pdf">Read the CFD data dictionary</a>
+        <a href="./Consumer-friendly display/SHOPPABLE_SERVICES_VOLUNTARY_SAMPLE_FILE_DATA_DICTIONARY.pdf">Read the CFD data dictionary</a>
       </div>
     </td>
   </tr>
   <tr>
-    <td colspan="2">Then prepare your display: <a href="./Shoppable services voluntary sample file/SS_Sample_Format.xlsx">Shoppable services voluntary sample file</a> - <a href="./Shoppable services voluntary sample file/SS_Sample_Format_Example_File.xlsx">Example sample file</a></td>
+    <td colspan="2">Then prepare your display: <a href="./Consumer-friendly display/SS_Sample_Format.xlsx">Shoppable services voluntary sample file</a> - <a href="./Consumer-friendly display/SS_Sample_Format_Example_File.xlsx">Example sample file</a></td>
   </tr>
   <tr>
-    <td colspan="2">Help consumers understand your display: <a href="./Shoppable services voluntary sample file/SHOPPABLE_SERVICES_VOLUNTARY_SAMPLE_FILE_CONSUMER_GUIDE.pdf">Consumer User Guide</a></td>
+    <td colspan="2">Help consumers understand your display: <a href="./Consumer-friendly display/SHOPPABLE_SERVICES_VOLUNTARY_SAMPLE_FILE_CONSUMER_GUIDE.pdf">Consumer User Guide</a></td>
   </tr>
 </table>
 
