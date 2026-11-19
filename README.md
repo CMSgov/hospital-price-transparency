@@ -9,8 +9,8 @@ The hospital price transparency requirements are codified in regulations at 45 C
 
 This repository provides resources for both requirements. Choose the section below that matches what you are preparing:
 
-- **Machine-readable file**: Find CSV and JSON data dictionaries, templates, examples, and tools to build and validate your machine-readable file.
-- **Consumer-friendly display**: Find a voluntary shoppable services sample file, completed example, data dictionary, and Consumer User Guide to help prepare your consumer-friendly display.
+- **Machine-readable file (MRF)**: Find CSV and JSON data dictionaries, templates, examples, and tools to build and validate your machine-readable file.
+- **Consumer-friendly display (CFD)**: Find a voluntary shoppable services sample file, completed example, data dictionary, and Consumer User Guide to help prepare your consumer-friendly display.
 
 ## Machine-readable File
 
